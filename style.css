@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Buffalo';
+    src: url('fonts/Buffalo.woff2') format('woff2'),
+         url('fonts/Buffalo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* Background image for the body */
+body {
+    background-image: url('wave (2).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black; /* Set background color to black */
+    color: white;
+    height: 100vh; /* Adjusted to cover the entire viewport height */
+    font-family: 'Poppins', sans-serif; /* Apply font to the entire page */
+    position: relative; /* Ensure relative positioning for overlay handling */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the entire navbar content */
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #495E57;
+    color: rgb(15, 15, 15);
+    font-family: 'Poppins', sans-serif;
+    position: relative; /* Ensure navbar remains above background content */
+    z-index: 2; /* Ensure navbar is above the video */
+}
+
+.logo {
+    margin-left: auto; /* Push the logo to the left */
+}
+
+.logo img {
+    height: 40px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the menu items */
+    flex-grow: 1; /* Allow the menu to grow and occupy available space */
+}
+.menu li {
+    position: relative; /* Important for the dropdown */
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+}
+
+/* Dropdown styling */
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%; /* Position below the "Services" */
+    left: 0;
+    background-color: #333;
+    display: none; /* Hidden by default */
+    min-width: 150px;
+}
+
+.dropdown li a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown li a:hover {
+    background-color: #555; /* Hover effect for dropdown items */
+}
+
+/* To make the navbar fixed */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-links .menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: rgb(255, 254, 254);
+    text-decoration: none;
+    padding: 8px 16px;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    border-radius: 4px;
+}
+.navbar h1{
+    margin-top: -45px;
+    margin-left: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300; 
+    transition: color 2s;
+    color: #ffffff;
+}
+.navbar h1:hover{
+    color:#F6C90E;
+    
+}
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    background-color: #ffffff;
+    color: rgb(7, 7, 7);
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    z-index: 2; /* Ensure contact info is above the video */
+    position: relative;
+}
+
+.contact-info p {
+    margin: 0;
+    
+    font-size: 14px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 60px;
+        width: 100%;
+        max-width: 300px;
+        background-color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 2; /* Ensure nav links are above the video */
+    }
+
+    .nav-links .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Section Styles */
+.content-section {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between the text and image */
+    padding: 20px; /* Add padding inside the section */
+    max-width: 1200px; /* Optional: Limit the width of the section */
+    margin: 0 auto; /* Center the section horizontally */
+    position: relative; /* Ensure correct positioning */
+    z-index: 2; /* Ensure content section is above the video */
+}
+
+.content-section p {
+    font-size: 16px; /* Adjust font size as needed */
+    margin: 0; /* Remove default margin */
+    font-family: 'Poppins', sans-serif;
+    margin-top: -150px; /* Adjust the value to move the text upwards */
+    line-height: 1.5; 
+}
+
+.highlight {
+    color: #060606; /* Change text color */
+    font-weight: bold; /* Make text bold */
+    padding: 2px 4px; /* Add some padding around the text */
+    border-radius: 4px; /* Optional: Rounded corners */
+    margin-right: 5px; /* Optional: Add space to the right of the span */
+    font-size: 49px;
+}
+
+.highlight1 {
+    color: #060606; /* Change text color */
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 2px 4px; /* Add some padding around the text */
+    border-radius: 4px; /* Optional: Rounded corners */
+    margin-right: 5px; /* Optional: Add space to the right of the span */
+    font-size: 49px;
+    font-weight: 00;
+}
+
+.content1 {
+    margin-top: 40%;
+    color: #060606; /* Change text color */
+    font-weight: bold; /* Make text bold */
+    padding: 2px 4px; /* Add some padding around the text */
+    border-radius: 4px; /* Optional: Rounded corners */
+    margin-right: 5px; /* Optional: Add space to the right of the span */
+    font-size: 20px;
+    font-family:poppins;
+
+}
+
+.contact-button {
+    display: inline-block;
+    background-color: #495E57;
+    color: white; /* Button text color */
+    padding: 10px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-top: 40px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    z-index: 2; /* Ensure button is above video */
+    position: relative; /* Ensure button is above video */
+ 
+    
+}
+
+.contact-button:hover {
+    background-color: #000000; /* Darker shade on hover */
+}
+
+/* Style for the image */
+.button-icon {
+    margin-bottom: -20px;
+    height: 500px; /* Adjust image height as needed */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 20px; /* Space between the image and text */
+    border-radius: 10px; /* Optional: Rounded corners for the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Optional: Add shadow for depth */
+    z-index: 2; /* Ensure image is above video */
+    position: relative; /* Ensure image is above video */
+}
+
+/* Video Overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%; /* Ensure the video covers the entire viewport */
+    overflow: hidden;
+    z-index: 1; /* Ensure the video is in the background */
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the background */
+    opacity: 0.3; /* Adjust opacity to blend with the background */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .content-section {
+        margin: 10px; /* Adjust margin for smaller screens */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .button-icon {
+        height: 300px; /* Adjust image height for smaller screens */
+    }
+}
+
+/* Another Section Styling */
+
+.title1 {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px; /* Adjust padding as needed */
+    background-color: #fffefe; /* Black background for contrast */
+    color: #030303; /* Gold text color */
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.title1 h1 {
+    font-size: 2.5rem; /* Adjust size as needed */
+    font-weight: 700; /* Bold text */
+    line-height: 1.4; /* Line spacing */
+    margin: 0; /* Remove default margin */
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .title1 {
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .title1 h1 {
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
+    }
+}
+.another-section {
+    position: relative;
+    text-align: center; 
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+.another-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-image: url('building1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content wrapper */
+    padding: 50px 20px; /* Add padding for spacing */
+}
+
+.card-container {
+    flex: 1;
+    margin-right: 20px;
+    text-align: left;
+}
+
+/* Professional Card Content Styling */
+.card-content {
+padding: 20px;
+    margin-left: 20px;
+    color: #ffffff;
+    font-family: poppins;
+    text-align: justify;
+    background-color: #3A4750;
+    border-radius: 20px;
+}
+
+.card-content h1 {
+    font-size: 2.2rem;
+    color: #F6C90E;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-content a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+    background-color: #EEEEEE;
+   
+}
+
+.card-content a:hover {
+    border-color: #FFD700;
+    color: white;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+/* Keyframes for fade-in effect */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style for the animated section */
+.fade-in {
+    opacity: 0; /* Start invisible */
+    animation: fadeInUp 3s forwards; /* Apply the fade-in animation */
+}
+
+/* Style for when the element is in view */
+.fade-in.show {
+    opacity: 1; /* Ensure element is fully visible */
+}
+/*carusel*/
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 700px; /* Adjust based on your needs */
+    margin: auto;
+    height: 630px; /* Fixed height for the carousel */
+    border-radius: 20px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 100%; /* Ensure items fill the carousel height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+}
+
+.carousel img {
+    width: 100%; /* Ensure image covers the full width of the item */
+    height: 100%; /* Ensure image covers the full height of the item */
+    object-fit: cover; /* Crop the image if necessary while maintaining aspect ratio */
+    border-radius: 10px; /* Optional: for rounded corners */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0.5rem;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.testimonial-section {
+    position: relative;
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevents scroll overflow */
+}
+
+.testimonial-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.testimonial {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.539);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transform: translateY(0); /* Default position */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    position: relative;
+}
+
+.testimonial-profile {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%; /* Circular profile picture */
+    object-fit: cover; /* Ensure image fits within the circle */
+    margin-bottom: 10px; /* Space between image and text */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial:hover {
+    transform: translateY(-10px); /* Slightly lift the testimonial on hover */
+}
+
+
+/* Hover effect to move testimonial up */
+.testimonial:hover {
+    transform: translateY(-10px); /* Adjust this value to control the amount of upward movement */
+}
+
+.testimonial p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.client-name {
+    font-weight: bold;
+    color: #FFD700; /* Gold text for client names */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.grid-section {
+    padding: 50px;
+    background-color: #000000;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.grid-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    color: #FFD700;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between grid items */
+    max-width: 1200px; /* Max width for the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+.grid-item {
+    background-color: #ffdd00f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.grid-item p {
+    margin: 0;
+}
+
+.name {
+    font-weight: bold;
+    color: #333;
+}
+
+.role {
+    color: #777;
+}
+
+/* Hover effect */
+.grid-item:hover {
+    transform: translateY(-10px); /* Adjust this value to control the amount of upward movement */
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+
+.ourteam{
+    text-align: center;
+    justify-content:center;
+    font-family: poppins;
+    width: 600px;
+    margin-left: 340px;
+}
+
+/* Footer Section */
+.card-footer {
+ 
+    padding-bottom: 10px; /* Padding below footer content */
+    margin-top: 20px; /* Space above the footer */
+    text-align: center; /* Center align footer text */
+    background-color: #ffffff;
+    
+}
+
+
+.footer-text {
+    font-size: 14px; /* Font size for footer text */
+    color: #090909; /* Text color */
+    margin: 0; /* Remove default margin */
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+    justify-content: center;
+}

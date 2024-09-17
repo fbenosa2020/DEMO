@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achellesvirtualteam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+    
+</head>
+
+<div>
+    <div class="contact-info">
+        <p>Phone: +1781-244-0009 | Email: achillesvirtualagency@gmail.com</p>
+    </div>
+    
+    <nav class="navbar">
+        <div class="logo"> 
+            <img src="achilles-removebg-preview.png" alt="Logo">
+            <h1>ACHILLES VIRTUAL AGENCY</h1>
+        </div>
+        <ul class="nav-links">
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="menu">
+                <li><a href="#">why us?</a></li>
+                <li><a href="#">About</a></li>
+                <a href="#" id="services-link">Services</a>
+                <ul class="dropdown" id="services-dropdown">
+                    <li><a href="#">Service 1</a></li>
+                    <li><a href="#">Service 2</a></li>
+                    <li><a href="#">Service 3</a></li>
+                </ul>
+            </li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#login"></a></li>
+            </div>
+        </ul>
+    </nav>
+   
+    </div>
+    <section class="content-section">
+      
+        <p>
+            <br>
+            <br>
+            <span class="highlight1">ACHILLES</span>
+            <span class="highlight1">VIRTUAL AGENCY</span>
+            <span class="content1">
+                <br>
+               Premium virtual assistants perform a wider range of business-critical support services.
+                   With a team of versatile and expert virtual assistant.
+                     <br>
+                <a href="contact.html" class="contact-button">Contact Us</a>
+                &nbsp;&nbsp;
+                <a href="contact.html" class="contact-button">Messagge us</a>
+            </span>
+            
+            
+        </p>
+        <br>
+        
+        <img src="model-removebg-preview.png" alt="Icon" class="button-icon">
+    </section>
+    
+    <div class="video-overlay">
+        <video autoplay muted loop class="background-video">
+            <source src="Bokeh Light Abstract Orange Light - Free Background Effects (online-video-cutter.com).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+</div>
+</div>
+</div>
+<div class="title1">
+    <!----about-->
+<h1>ABOUT ACHILLES</h1>
+
+<h1>The Achilles Virtual Agency team<br>
+    </h1>
+</div>
+<div class="another-section fade-in">
+<div class="another-section">
+    <div class="content-wrapper">
+        <div class="card-container">
+            <div class="card-content">
+               
+                <h1><span>Achilles Virtual  <br>Agency Team</span></h1>
+                
+                <p>Premium virtual assistants perform a wider range of business-critical support services.
+                <br> With a team of versatile and expert virtual assistants, web research gurus, technical
+                <br> and customer support professionals, administrative assistants, and researchers to let
+                <br> you focus on the biggest problems you are most likely to face during your workday!
+                <br> We can help with day-to-day admin tasks, online research, presentations, documentation,
+                <br> customer support, email marketing, and tasks that help you stay on top of your to-do list.
+                <br> We give you more time to focus on the big picture by handling the details.
+                <br> As an Achilles Virtual Agency client, you get your very own Virtual Assistant (VA) — a smart, highly trained individual.</p>
+
+                <a href="contact.html" class="contact-button">CONNECT WITH US</a>
+            </div>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-wrapper">
+                <div class="carousel-item">
+                    <img src="model 8.jpg" alt="Achilles Virtual Agency Team">
+                </div>
+                <div class="carousel-item">
+                    <img src="model 6.jpg" alt="Achilles Virtual Agency Team">
+                </div>
+                <div class="carousel-item">
+                    <img src="model 7.jpg" alt="Achilles Virtual Agency Team">
+                </div>
+                <!-- Add more carousel items as needed -->
+            </div>
+            <button class="carousel-control prev">❮</button>
+            <button class="carousel-control next">❯</button>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const prevButton = document.querySelector('.carousel-control.prev');
+                const nextButton = document.querySelector('.carousel-control.next');
+                const carouselWrapper = document.querySelector('.carousel-wrapper');
+                const carouselItems = document.querySelectorAll('.carousel-item');
+                let currentIndex = 0;
+            
+                function updateCarousel() {
+                    const offset = -currentIndex * 100;
+                    carouselWrapper.style.transform = `translateX(${offset}%)`;
+                }
+            
+                prevButton.addEventListener('click', function() {
+                    currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+                    updateCarousel();
+                });
+            
+                nextButton.addEventListener('click', function() {
+                    currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+                    updateCarousel();
+                });
+            
+                // Optional: Auto-slide functionality
+                setInterval(function() {
+                    nextButton.click();
+                }, 5000); // Change image every 5 seconds
+            });
+            </script>
+            
+    </div>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const fadeInElements = document.querySelectorAll('.fade-in');
+    
+        function checkVisibility() {
+            fadeInElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    element.classList.add('show');
+                }
+            });
+        }
+    
+        // Initial check
+        checkVisibility();
+    
+        // Check on scroll
+        window.addEventListener('scroll', checkVisibility);
+    });
+    </script>
+    
+        <br>
+   <!-- Testimonial Section -->
+   <div class="testimonial-section">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="model 8.jpg" alt="Jane Doe" class="testimonial-profile">
+            <p>"Working with Achilles Virtual Assistants has been a game-changer for our business. The quality of work and professionalism is unmatched!"</p>
+            <p class="client-name">- Jane Doe, CEO of Company XYZ</p>
+        </div>
+        <div class="testimonial">
+            <img src="model 6.jpg" alt="John Smith" class="testimonial-profile">
+            <p>"The virtual assistants from Latin America provided by Achilles have exceeded our expectations. They are reliable, skilled, and incredibly helpful."</p>
+            <p class="client-name">- John Smith, Marketing Director at ABC Inc.</p>
+        </div>
+        <div class="testimonial">
+            <img src="model 5.jpg" alt="Emily Johnson" class="testimonial-profile">
+            <p>"Our experience with Achilles Virtual Assistants has been fantastic. They have taken care of so many tasks efficiently, allowing us to focus on growth."</p>
+            <p class="client-name">- Emily Johnson, Founder of Startup Now</p>
+        </div>
+    </div>
+</div>
+
+
+    <br>
+    <div class="grid-section">
+        <h2>Our Team</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="building3.jpg" alt="Team Member 1">
+                <p class="name">Team Member 1</p>
+                <p class="role">Role</p>
+            </div>
+            <div class="grid-item">
+                <img src="building3.jpg" alt="Team Member 2">
+                <p class="name">Team Member 2</p>
+                <p class="role">Role</p>
+            </div>
+            <!-- Repeat for additional team members up to 18 items -->
+            <div class="grid-item">
+                <img src="building3.jpg" alt="Team Member 18">
+                <p class="name">Team Member 18</p>
+                <p class="role">Role</p>
+            </div>
+            <div class="grid-item">
+                <img src="building3.jpg" alt="Team Member 18">
+                <p class="name">Team Member 18</p>
+                <p class="role">Role</p>
+            </div>
+            <div class="grid-item">
+                <img src="building3.jpg" alt="Team Member 18">
+                <p class="name">Team Member 18</p>
+                <p class="role">Role</p>
+            </div>
+            <div class="grid-item">
+                <img src="building3.jpg" alt="Team Member 18">
+                <p class="name">Team Member 18</p>
+                <p class="role">Role</p>
+            </div>
+          
+        </div>
+    </div>
+    <div class="ourteam">
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim adipisci molestias labore, facere esse alias cupiditate totam eius commodi maiores harum vero reiciendis. Modi numquam ipsum adipisci officia quod temporibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, deserunt blanditiis aperiam debitis deleniti nulla! Voluptate deleniti esse dolorem alias. Laudantium aspernatur aliquam eius ducimus sapiente eos quidem cum? Sit!</p>
+</div>
+    <!-- Footer Section -->
+    <div class="card-footer">
+        <p class="footer-text">© 2024 ACHILLES VIRTUAL ASSISTANT. All rights reserved.</p>
+    </div>
+</div>
+</body>
+</html>
