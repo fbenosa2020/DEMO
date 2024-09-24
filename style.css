@@ -214,88 +214,84 @@ nav {
 
 /******* Section Styles*******/
 .content-section {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Space between the text and image */
-    padding: 20px; /* Add padding inside the section */
-    max-width: 1200px; /* Optional: Limit the width of the section */
-    margin: 0 auto; /* Center the section horizontally */
-    position: relative; /* Ensure correct positioning */
-    z-index: 2; /* Ensure content section is above the video */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    position: relative; 
+    z-index: 2;
+}
+.overlay-logo {
+    position: absolute; /* Position the logo absolutely */
+    top: 20px; /* Adjust vertical position */
+    left: 110px; /* Adjust horizontal position */
+    height: 400px; /* Set a height for the logo */
+    width: auto; /* Maintain aspect ratio */
+    z-index: 2; /* Ensure it overlays on top */
+    opacity: 1.0; 
 }
 
-.content-section p {
-    font-size: 16px; /* Adjust font size as needed */
-    margin: 0; /* Remove default margin */
-    font-family: 'Poppins', sans-serif;
-    margin-top: -150px; /* Adjust the value to move the text upwards */
-    line-height: 1.5; 
-}
 
-.highlight {
-    color: #060606; /* Change text color */
-    font-weight: bold; /* Make text bold */
-    padding: 2px 4px; /* Add some padding around the text */
-    border-radius: 4px; /* Optional: Rounded corners */
-    margin-right: 5px; /* Optional: Add space to the right of the span */
-    font-size: 49px;
-}
-
-.highlight1 {
-    color: #060606; /* Change text color */
-    font-family: "Archivo Black", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    padding: 2px 4px; /* Add some padding around the text */
-    border-radius: 4px; /* Optional: Rounded corners */
-    margin-right: 5px; /* Optional: Add space to the right of the span */
-    font-size: 49px;
-    font-weight: 00;
-}
-
+/* Content text styling */
 .content1 {
-    margin-top: 40%;
-    color: #ffffff; /* Change text color */
-    font-weight: bold; /* Make text bold */
-    padding: 2px 4px; /* Add some padding around the text */
-    border-radius: 4px; /* Optional: Rounded corners */
-    margin-right: 5px; /* Optional: Add space to the right of the span */
-    font-size: 20px;
-    font-family:poppins;
-
-}
-
-.contact-button {
-    display: inline-block;
-    background-color: #495E57;
-    color: white; /* Button text color */
-    padding: 10px 40px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    margin-top: 40px; /* Space above the button */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-    z-index: 2; /* Ensure button is above video */
-    position: relative; /* Ensure button is above video */
- 
+    display: block; /* Makes the span act like a block element */
+    margin-top:320px; /* Add spacing above */
+    margin-bottom: 10px; /* Add spacing below */
+    color: #ffffff; /* Ensure the text color contrasts with the background */
+    font-weight: bold;
+    font-size: 21px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Add text shadow for visibility */
+    margin-left: 20px;
     
 }
 
-.contact-button:hover {
-    background-color: #000000; /* Darker shade on hover */
+.content-section p {
+    display: block; /* Ensures the paragraph behaves as a block */
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5; /* Ensure good spacing between lines */
+    position: relative; /* Position relative to allow absolute positioning of child elements */
 }
 
-/* Style for the image */
+/* Button styling */
+.contact-button {
+    display: inline-block;
+    background-color: #495E57;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+    position: relative;
+    margin-left: 20px;
+}
+
+/* Only apply margin to the second button */
+.contact-button:nth-child(2) {
+    margin-left: 0px; /* Add left margin only to the second button */
+}
+
+
+.contact-button:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+/* Image styling */
 .button-icon {
     margin-bottom: -20px;
-    height: 500px; /* Adjust image height as needed */
-    width: auto; /* Maintain aspect ratio */
-    margin-left: 20px; /* Space between the image and text */
-    border-radius: 10px; /* Optional: Rounded corners for the border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Optional: Add shadow for depth */
-    z-index: 2; /* Ensure image is above video */
-    position: relative; /* Ensure image is above video */
+    height: 600px;
+    width: auto;
+    margin-left: 20px;
+    border-radius: 10px;
+    z-index: 2;
+    position: relative;
 }
 
 /* Video Overlay */
@@ -304,29 +300,39 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 99%; /* Ensure the video covers the entire viewport */
-    overflow: hidden;
-    z-index: 1; /* Ensure the video is in the background */
+    height: 115%;
+    z-index: 1;
 }
 
 .background-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the video covers the background */
-    opacity: 0.3; /* Adjust opacity to blend with the background */
+    object-fit: cover;
+    opacity: 0.3;
 }
+/* Logo styling */
 
-/* Responsive for mobile */
+
+
+/* Responsive styling */
 @media (max-width: 768px) {
     .content-section {
-        margin: 10px; /* Adjust margin for smaller screens */
-        padding: 15px; /* Adjust padding for smaller screens */
+        margin: 10px;
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
     }
 
     .button-icon {
-        height: 300px; /* Adjust image height for smaller screens */
+        height: 300px;
     }
-}
+
+    .social-icons {
+        justify-content: center;
+    }
+}/* Styling for the Find Us text */
+
+
 
 /* about us!!!!!!!!!!!!!!!!!! */
 .title1 {

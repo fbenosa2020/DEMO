@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Achilles Virtual Agency</title>
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="achilles-removebg-preview.png" alt="Achilles Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="slider">
+            <div class="slide">
+                <img src="bck2.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="building.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="building1.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="building3.jpg" alt="Slide 4">
+            </div>
+        </div>
+        
+        <div class="overlay">
+            <h1>Welcome to Achilles Virtual Agency</h1>
+            <br>
+            <br>
+            <p>Your partner in excellence.</p>
+        </div>
+    </header>
+    
+    
+    
+
+    <section class="about-section">
+        <h1>About Us</h1>
+        <p>Welcome to Achilles Virtual Agency, your partner in success! We are dedicated to providing exceptional virtual assistant services tailored to meet your business needs.</p>
+        
+        <h2>Our Mission</h2>
+        <p>At Achilles, our mission is to empower businesses by offering reliable and skilled virtual assistants who can help you streamline your operations and achieve your goals efficiently.</p>
+        
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Experienced Professionals</li>
+            <li>Cost-Effective Solutions</li>
+            <li>24/7 Availability</li>
+            <li>Customized Services</li>
+            
+        </ul>
+        
+        <h2>Meet Our Team</h2>
+        <p>Our team consists of talented professionals from diverse backgrounds who are passionate about helping businesses thrive.</p>
+        
+        <h2>Get in Touch</h2>
+        <p>If you have any questions or would like to learn more about our services, feel free to <a href="contact.html">contact us</a>!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Achilles Virtual Agency. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0; // Track the current slide index
+const slides = document.querySelectorAll('.slide'); // Get all slides
+const totalSlides = slides.length; // Total number of slides
+
+function showSlide(index) {
+    const slideWidth = 100 / totalSlides; // Calculate slide width in percentage
+    const offset = index * slideWidth; // Calculate offset
+    document.querySelector('.slider').style.transform = `translateX(-${offset}%)`; // Move the slider
+}
+
+// Show the next slide every 5 seconds
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides; // Move to the next slide
+    showSlide(currentSlide); // Display the next slide
+}, 5000); // 5000 milliseconds = 5 seconds
+
+// Show the first slide initially
+showSlide(currentSlide);
+
+    </script>
+</body>
+</html>
