@@ -119,14 +119,15 @@ nav {
 .navbar h1 {
     margin-top: -45px;
     margin-left: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
-    transition: color 2s;
-    color: #ffffff;
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+     font-style: normal;
+    transition: color 1s;
+    color: #F6C90E;
 }
 
 .navbar h1:hover {
-    color: #F6C90E;
+    color: #ffffff;
 }
 
 /* Contact Info Styles */
@@ -341,7 +342,9 @@ nav {
     padding: 40px 20px; /* Adjust padding as needed */
     background-color: #fffefe; /* Background for contrast */
     color: #030303; /* Text color */
-    font-family: 'Poppins', sans-serif;
+    font-family: "poppins";
+  font-weight: 400;
+  font-style: normal;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
@@ -618,16 +621,40 @@ nav {
 }
 .grid-section {
     padding: 50px;
-    background-color: #000000;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    position: relative; /* Ensure relative positioning for overlay handling */
+    margin-top: -24px;
+    z-index: 2;
+    color: white; /* Text color */
 }
+
+.grid-section::before {
+    content: "";
+    background-image: url('bck2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3; /* Adjust opacity as needed */
+    z-index: -1; /* Position the background behind the content */
+}
+
+.grid-container {
+    position: relative; /* To ensure the content is positioned above the background */
+    z-index: 1; /* Ensure content is above the background */
+}
+
 
 .grid-section h2 {
     font-size: 2rem;
     margin-bottom: 30px;
     font-weight: 600;
-    color: #FFD700;
+    color: #ffffff;
 }
 
 .grid-container {
@@ -686,7 +713,6 @@ nav {
 }
 
 /*our  team section*/
-
 .ourteam-section {
     padding: 60px 20px;
     background-color: #f9f9f9;
@@ -715,11 +741,20 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center; /* Align icon and text */
+    gap: 15px; /* Space between icon and text */
+}
+
+.testimonial-card i {
+    font-size: 40px;
+    color: #000000;
 }
 
 .testimonial-card p {
     font-size: 1rem;
     color: #555;
+    flex: 1; /* Ensure text takes up remaining space */
 }
 
 .testimonial-card strong {
@@ -729,6 +764,22 @@ nav {
 
 .testimonial-card:hover {
     transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .team-content {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .testimonial-card {
+        flex-direction: column; /* Stack icon and text vertically */
+        align-items: flex-start;
+    }
+
+    .testimonial-card i {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
 }
 
 /* Responsive Design for Tablets and Smaller Screens */
@@ -777,15 +828,90 @@ html {
 
 
 /*end of our team*/
+/*what we offer*/
+.offer-section {
+    padding: 60px 20px;
+    background-color: #000000;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.offer-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #F6C90E;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.offer-description {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.offer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offer-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-item i {
+    font-size: 40px;
+    color: #495E57;
+    margin-bottom: 15px;
+}
+
+.offer-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.offer-item p {
+    font-size: 1rem;
+    color: #777;
+    margin: 0;
+}
+
+.offer-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 992px) {
+    .offer-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+
+/*end*/
 
 
 /* Footer Section */
 .card-footer {
- 
-    padding-bottom: 10px; /* Padding below footer content */
-    margin-top: 20px; /* Space above the footer */
+
+    margin-top: 40px; /* Space above the footer */
     text-align: center; /* Center align footer text */
-    background-color: #ffffff;
+    background-color: #fffefe;
     
 }
 
