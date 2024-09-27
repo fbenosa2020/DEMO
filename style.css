@@ -104,17 +104,34 @@ nav {
 }
 
 .nav-links a {
-    color: rgb(255, 254, 254);
     text-decoration: none;
-    padding: 8px 16px;
-    transition: background 0.3s ease;
-    text-align: center;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000; /* Underline color */
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-    text-decoration: underline;
-    border-radius: 4px;
+    transform: scale(1.05); /* Slightly grows the link */
+    color: #F6C90E; /* Change link color on hover */
 }
+
+.nav-links a:hover::before {
+    visibility: visible;
+    width: 100%; /* Underline expands fully */
+}
+
 
 .navbar h1 {
     margin-top: -45px;
@@ -281,8 +298,8 @@ nav {
 
 
 .contact-button:hover {
-    background-color: #10f367;
-    color: #000;
+    background-color: #000000;
+    color: #ffffff;
 }
 /* Image styling */
 .button-icon {
