@@ -15,7 +15,7 @@ body {
     background-size: cover;
     background-color: black; /* Set background color to black */
     color: white;
-    height: 99.22vh; /* Adjusted to cover the entire viewport height */
+    height: 99.75vh; /* Adjusted to cover the entire viewport height */
     font-family: 'Poppins', sans-serif; /* Apply font to the entire page */
     position: relative; /* Ensure relative positioning for overlay handling */
 }
