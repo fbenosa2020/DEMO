@@ -8,6 +8,7 @@ body {
 }
 
 /* Header Styles */
+/* Header Styling */
 header {
     position: relative;
     height: 400px; /* Adjust height as needed */
@@ -19,64 +20,104 @@ header {
 }
 
 .logo img {
-    width: 150px;
+    width: 150px; /* Adjust logo size */
     margin: 20px;
     transition: transform 0.3s ease;
 }
 
 .logo img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Add hover effect on logo */
 }
 
-/* Nav Styling */
-nav {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0); 
-    padding: 10px 20px;
-    border-radius: 5px;
+/* Main Navigation Styling */
+.main-nav {
+    background-color: #495E57; /* Clean white background */
+    border-bottom: 2px solid #495E57; /* Subtle bottom border */
+    padding: 20px 0; /* Add vertical padding for spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    position: fixed; /* Fix the nav bar at the top */
+    width: 100%;
+    z-index: 1000; /* Ensure it's on top of everything */
+    top: 0; /* Stick to top */
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+/* Navigation Links Container */
+.nav-links {
+    list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Center the links */
+    align-items: center;
 }
 
-nav ul li {
-    display: inline-block;
+/* Each Navigation Link */
+.nav-links li {
+    margin: 0 20px; /* Space between the links */
 }
 
-nav ul li a {
-    color: white;
+/* Link Styling */
+.nav-links a {
+    font-family: 'Arial', sans-serif; /* Professional sans-serif font */
+    font-size: 18px;
+    font-weight: 500; /* Slightly bold for emphasis */
+    color: #ffffff; /* Dark gray for text color */
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s, transform 0.3s;
-    padding: 5px 10px;
+    padding: 8px 16px; /* Add padding for clickable area */
+    position: relative; /* Relative for hover underline effect */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
-nav ul li a:hover {
-    color: #F6C90E;
-    transform: scale(1.05);
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+/* Hover Effect for Links */
+.nav-links a:hover {
+    color: #F6C90E; /* Change color to a professional blue */
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+/* Underline Effect */
+.nav-links a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #F6C90E; /* Blue underline */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+/* Expand Underline on Hover */
+.nav-links a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+/* Responsive Navbar for Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
 }
 
 /* Slider Styles */
 .slider {
     display: flex;
     transition: transform 1s ease-in-out;
-    width: 400%;
+    width: 400%; /* Adjust according to the number of slides */
     position: absolute;
     top: 0;
     left: 0;
 }
 
 .slide {
-    width: 25%; 
+    width: 25%; /* Each slide takes up 25% of the width (4 slides total) */
 }
 
 .slide img {
@@ -99,7 +140,7 @@ nav ul li a:hover {
     color: white;
     z-index: 2;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     padding: 20px;
 }
 
@@ -110,12 +151,14 @@ nav ul li a:hover {
     padding: 0;
     letter-spacing: 2px;
     animation: fadeIn 1s ease-in-out;
+    font-family: 'Poppins', sans-serif;
 }
 
 .overlay p {
     font-size: 1.2rem;
     margin-top: 20px;
     animation: fadeIn 1.5s ease-in-out;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Slider Animation Keyframes */
@@ -130,123 +173,7 @@ nav ul li a:hover {
     }
 }
 
-/* About Section Styles */
-.about-section {
-    padding: 50px;
-    background-color: #f4f4f9;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.about-card {
-    flex: 1 1 45%;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-}
-
-.about-card:hover {
-    transform: translateY(-10px);
-}
-
-.mission-card {
-    background-color: #ffefd5;
-}
-
-.choose-us-card {
-    background-color: #d8bfd8;
-}
-
-.team-card {
-    background-color: #add8e6;
-}
-
-.contact-card {
-    background-color: #98fb98;
-}
-
-.about-card h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.about-card p,
-.about-card ul {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-.about-card ul {
-    list-style: none;
-    padding: 0;
-}
-
-.about-card ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.about-card ul li i {
-    margin-right: 10px;
-    color: #333;
-}
-
-.card-icon {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.about-card a {
-    color: #ff4500;
-    text-decoration: none;
-}
-
-.about-card a:hover {
-    text-decoration: underline;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #495E57;
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Responsive Styling */
-@media (max-width: 1024px) {
-    header {
-        height: 350px;
-    }
-
-    .slide img {
-        height: 350px;
-    }
-
-    .overlay h1 {
-        font-size: 2rem;
-    }
-}
-
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -254,31 +181,23 @@ footer {
     }
 
     .overlay h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .overlay p {
         font-size: 1rem;
     }
-
-    .cards-container {
-        flex-direction: column;
-    }
-
-    .about-card {
-        flex: 1 1 100%;
-    }
-
-    .slider {
-        display: block;
-    }
-
-    .slide img {
-        height: 300px;
-    }
 }
 
 @media (max-width: 480px) {
+    .overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+    }
+
     nav {
         top: 10px;
         right: 10px;
@@ -289,27 +208,125 @@ footer {
         gap: 10px;
     }
 
-    .overlay h1 {
-        font-size: 1.5rem;
-    }
-
-    .overlay p {
-        font-size: 0.9rem;
-    }
-
-    header {
-        height: 250px;
+    .slider {
+        display: block;
     }
 
     .slide img {
         height: 250px;
     }
+}
 
+
+/* About Section Styles */
+.about-section {
+    padding: 50px;
+    background-color: #f4f4f9;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .about-card {
+    flex: 1 1 45%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+  }
+  
+  .about-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .mission-card {
+    background-color: #ffefd5;
+  }
+  
+  .choose-us-card {
+    background-color: #d8bfd8;
+  }
+  
+  .team-card {
+    background-color: #add8e6;
+  }
+  
+  .contact-card {
+    background-color: #98fb98;
+  }
+  
+  .about-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-card p,
+  .about-card ul {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .about-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-card ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .about-card ul li i {
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .card-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .about-card a {
+    color: #ff4500;
+    text-decoration: none;
+  }
+  
+  .about-card a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .cards-container {
+      flex-direction: column;
+    }
+  
     .about-card {
-        padding: 15px;
+      flex: 1 1 100%;
     }
+  }
+  
 
-    footer {
-        padding: 15px;
-    }
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #495E57;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
