@@ -3,25 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintenance Notice</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="maintenance.css">
+    <title>Achellesvirtualteam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bungee+Tint&family=Concert+One&family=Gravitas+One&family=Luckiest+Guy&family=Monoton&display=swap" rel="stylesheet">
+    
+
+    
 </head>
-<body>
-    <div class="maintenance-container">
-        <div class="maintenance-message">
-            <h1>We'll Be Back Soon!</h1>
-            <p>Our website is currently undergoing scheduled maintenance.</p>
-            <p>We apologize for the inconvenience and appreciate your patience. Please check back later!</p>
-            <p><strong>Estimated Time:</strong> Until further Notice</p>
-            <div class="icon">
-                <i class="fas fa-tools"></i>
+    <div class="contact-info">
+        <p>Phone: +1781-244-0009 | Email: achillesvirtualagency@gmail.com</p>
+    </div>
+    
+    <nav class="navbar">
+        <div class="logo"> 
+            <img src="achilles-removebg-preview.png" alt="Logo">
+            <h1>ACHILLES VIRTUAL AGENCY</h1>
+        </div>
+        <ul class="nav-links">
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="menu">
+                <li><a href="#why-us">Why Us?</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <a href="https://form.jotform.com/232814970546159" id="services-link">Want to hire VA?</a>
+                <a href="#what-we-offer">What We Offer</a>
+                <li><a href="https://forms.gle/6TPB5G3waVeGyHrz7">Join us Now!</a></li>
+               
+            </div>
+        </ul>
+    </nav>
+</div>
+</div>
+
+    <section class="content-section">
+        <img src="achilles-removebg-preview.png" alt="Achilles Logo" class="overlay-logo"> <!-- Logo for overlay -->
+    </div>
+        <p>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+           
+            <span class="content1">
+                <br>
+                Premium virtual assistants perform a wider <Br>range of business-critical support services
+            </span> 
+          
+            <!-- Buttons -->
+            <a href="maintenance.html" class="contact-button">Contact Us</a>
+            &nbsp;&nbsp;
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=achillesvirtualagency@gmail.com" target="_blank" class="contact-button">Message Us</a>
+
+        </p>
+           
+        <img src="model-removebg-preview.png" alt="Icon" class="button-icon">
+    </section>
+
+    <div class="image-overlay"> <!-- New image background -->
+        <img src="bck4.jpg" alt="New Background Image" class="background-image">
+    </div>
+    <div class="video-overlay">
+        <video autoplay muted loop class="background-video">
+            <source src="Gold Particles Light Balls Bokeh - Free Background Effect.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    
+ <!----about-->
+<div class="title1" id="about-us">
+   
+<h1>ABOUT ACHILLES</h1>
+
+<h1>The Achilles Virtual Agency Team<br>
+    </h1>
+</div><section class="about-us-section">
+    <div class="container">
+        <div class="about-content">
+            <div class="text-content">
+                <h2>The Achilles Virtual Agency</h2>
+                <p>
+                   Premium virtual assistants  <strong>perform a wider range of business-critical support services. </strong>
+With a team of versatile and expert virtual assistants, web research gurus, technical
+and customer support professionals, administrative assistants, and researchers to let
+you focus on the biggest problems you are most likely to face during your workday!
+We can help with day-to-day admin tasks, online research, presentations, documentation,
+customer support, email marketing, and tasks that help you stay on top of your to-do list.
+We give you more time to focus on the big picture by handling the details.
+As an Achilles Virtual Agency client, you get your very own Virtual Assistant (VA) — a smart, highly trained individual.
+                </p>
+                <p>
+                    With a focus on efficiency, professionalism, and reliability, we partner with businesses to help them scale and optimize their operations, allowing them to focus on growth and innovation.
+                </p>
+                <a href="contact.html" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="image-content">
+                <img src="bck2.jpg" alt="Achilles Virtual Agency Team">
             </div>
         </div>
     </div>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Achilles Virtual Agency. All rights reserved.</p>
-    </footer>
+        <script>
+            window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+};
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const prevButton = document.querySelector('.carousel-control.prev');
+                const nextButton = document.querySelector('.carousel-control.next');
+                const carouselWrapper = document.querySelector('.carousel-wrapper');
+                const carouselItems = document.querySelectorAll('.carousel-item');
+                let currentIndex = 0;
+            
+                function updateCarousel() {
+                    const offset = -currentIndex * 100;
+                    carouselWrapper.style.transform = `translateX(${offset}%)`;
+                }
+            
+                prevButton.addEventListener('click', function() {
+                    currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+                    updateCarousel();
+                });
+            
+                nextButton.addEventListener('click', function() {
+                    currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+                    updateCarousel();
+                });
+            
+                // Optional: Auto-slide functionality
+                setInterval(function() {
+                    nextButton.click();
+                }, 5000); // Change image every 5 seconds
+            });
+            </script>
+            
+    </div>
+</div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const fadeInElements = document.querySelectorAll('.fade-in');
+    
+        function checkVisibility() {
+            fadeInElements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    element.classList.add('show');
+                }
+            });
+        }
+    
+        // Initial check
+        checkVisibility();
+    
+        // Check on scroll
+        window.addEventListener('scroll', checkVisibility);
+    });
+    </script>
+    
+        <br>
+   <!-- Testimonial Section -->
+   <div class="testimonial-section">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+        <div class="testimonial">
+            <img src="model 8.jpg" alt="Jane Doe" class="testimonial-profile">
+            <p>"Working with Achilles Virtual Assistants has been a game-changer for our business. The quality of work and professionalism is unmatched!"</p>
+            <p class="client-name">- Jane Doe, CEO of Company XYZ</p>
+        </div>
+        <div class="testimonial">
+            <img src="model 6.jpg" alt="John Smith" class="testimonial-profile">
+            <p>"The virtual assistants from Latin America provided by Achilles have exceeded our expectations. They are reliable, skilled, and incredibly helpful."</p>
+            <p class="client-name">- John Smith, Marketing Director at ABC Inc.</p>
+        </div>
+        <div class="testimonial">
+            <img src="model 7.jpg" alt="Emily Johnson" class="testimonial-profile">
+            <p>"Our experience with Achilles Virtual Assistants has been fantastic. They have taken care of so many tasks efficiently, allowing us to focus on growth."</p>
+            <p class="client-name">- Emily Johnson, Founder of Startup Now</p>
+        </div>
+    </div>
+</div>
+
+<!-----our team section-->
+    <br>
+    <div class="grid-section">
+        <h2> Meet Our Team</h2>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="team1.jpg" alt="Team Member 1">
+                <p class="name">Team Member 1</p>
+                <p class="role">Virtual Asistant</p>
+            </div>
+            <div class="grid-item">
+                <img src="team3.jpg" alt="Team Member 2">
+                <p class="name">Team Member 2</p>
+                <p class="role">Virtual Asistant</p>
+            </div>
+            <!-- Repeat for additional team members up to 18 items -->
+            <div class="grid-item">
+                <img src="team2.jpg".jpg" alt="Team Member 18">
+                <p class="name">Team Member 18</p>
+                <p class="role">Virtual Asistant</p>
+            </div>
+            <div class="grid-item">
+                <img src="team4.jpg" alt="Team Member 18">
+                <p class="name">Team Member 18</p>
+                <p class="role">Virtual Asistant</p>
+            </div>
+            <div class="grid-item">
+                <img src="model 7.jpg" alt="Team Member 18">
+                <p class="name">Team Member 18</p>
+                <p class="role">Virtual Asistant</p>
+            </div>
+            <div class="grid-item">
+                <img src="team6.jpg" alt="Team Member 18">
+                <p class="name">Team Member 18</p>
+                <p class="role">Virtual Asistant</p>
+            </div>
+          
+        </div>
+    </div>
+    <!-----end of out section---->
+    <div class="ourteam-section" id="why-us">
+        <div class="container">
+            <h2>Why Choose Achilles Virtual Agency for Your Virtual Assistant Career?</h2>
+            <div class="team-content">
+                <div class="testimonial-card">
+                    <i class="fas fa-tasks" style="color:red"></i> <!-- Icon for Diverse Work -->
+                    <p><strong>1. Diverse and Engaging Work</strong><br>
+                        At Achilles Virtual Agency, you’ll have the opportunity to work on a wide range of tasks and projects. From administrative support and customer service to online research and data entry, our VAs handle diverse responsibilities that keep the job interesting and engaging.
+                    </p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-chart-line" style="color:blue;"></i> <!-- Icon for Professional Growth -->
+                    <p><strong>2. Professional Growth and Development</strong><br>
+                        We believe in investing in our team. As a Virtual Assistant with us, you’ll have access to ongoing training and development opportunities. This ensures you can continuously improve your skills and advance your career.
+                    </p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-home" style="color: skyblue;"></i> <!-- Icon for Flexible Work -->
+                    <p><strong>3. Flexible Work Environment</strong><br>
+                        One of the biggest perks of working with Achilles Virtual Agency is the flexibility. You can work remotely from anywhere, allowing you to balance your professional and personal life effectively. This flexibility is perfect for those who value work-life balance.
+                    </p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-users" style="color: blueviolet;"></i> <!-- Icon for Team Culture -->
+                    <p><strong>4. Supportive Team Culture</strong><br>
+                        We foster a supportive and collaborative team environment. You’ll be part of a community of like-minded professionals who are always ready to help and share their knowledge. This sense of camaraderie makes working with us a rewarding experience.
+                    </p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-dollar-sign" style="color: green;"></i> <!-- Icon for Compensation -->
+                    <p><strong>5. Competitive Compensation</strong><br>
+                        We offer competitive pay rates that reflect your skills and experience.
+                    </p>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-briefcase" style="color: orange;"></i> <!-- Icon for Stability -->
+                    <p><strong>6. Proven Success and Stability</strong><br>
+                        With a solid track record of success and a growing client base, Achilles Virtual Agency offers a stable and reliable work environment. You can be confident in the longevity and security of your position with us.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- What We Offer Section -->
+<div id="what-we-offer" class="offer-section">
+    <h2>What We Offer</h2>
+    <p class="offer-description">Explore the wide range of services we provide to help you succeed.</p>
+    <div class="offer-container"> 
+        <div class="offer-item">
+            <i class="fas fa-chart-line" style="color:green"></i> <!-- Icon -->
+            <h3>Business Growth</h3>
+            <p>We provide strategies and insights to accelerate your business growth.</p>
+        </div>
+        <div class="offer-item">
+            <i class="fas fa-handshake" style="color:blue"></i> <!-- Icon -->
+            <h3>Client Relations</h3>
+            <p>Strengthen your client relationships with expert management solutions.</p>
+        </div>
+        <div class="offer-item">
+            <i class="fas fa-laptop-code" style="color: aquamarine;"></i> <!-- Icon -->
+            <h3>Technical Support</h3>
+            <p>Reliable tech support to ensure your operations run smoothly.</p>
+        </div>
+        <div class="offer-item">
+            <i class="fas fa-headset" style="color:blueviolet"></i> <!-- Icon -->
+            <h3>Virtual Assistance</h3>
+            <p>Our virtual assistants help manage your tasks efficiently and on time.</p>
+        </div>
+        <!-- Add more offer items as needed -->
+    </div>
+</div>
+
+
+
+    
+
+    <!-- Footer Section -->
+    <div class="card-footer">
+        <p class="footer-text">© 2024 ACHILLES VIRTUAL ASSISTANT. All rights reserved.</p>
+    </div>
+</div>
 </body>
 </html>
