@@ -163,6 +163,7 @@ nav {
     font-size: 14px;
 }
 
+
 /* Responsive styles for small screens */
 @media (max-width: 768px) {
     .nav-links {
@@ -318,13 +319,13 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 115.10%;
+    height: 100%;
     z-index: 1;
 }
 
 .background-video {
     width: 100%;
-    height: 100%;
+    height: 116.5%;
     object-fit: cover;
     opacity: 0.3;
 }
@@ -334,7 +335,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 115.10%;
+    height: 116.5%;
     z-index: 1; /* Ensure it's behind content but above the video */
     overflow: hidden;
 }
@@ -936,22 +937,74 @@ html {
 
 /*end*/
 
-
-/* Footer Section */
+/* Ensure the footer is styled well */
+/* Ensure the footer stays at the bottom and is laid out with flexbox */
 .card-footer {
-
-    margin-top: 40px; /* Space above the footer */
-    text-align: center; /* Center align footer text */
-    background-color: #fffefe;
-    
+    background-color: #f8f9fa; /* Adjust background color as needed */
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Adjust padding */
 }
 
+/* Social media icons (left) */
+.footer-left a {
+    color: #333; /* Social icon color */
+    font-size: 20px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.footer-left a:hover {
+    color: #007bff; /* Hover color */
+}
+
+/* Center content (logo and text) */
+.footer-center {
+    text-align: center;
+}
+
+.footer-logo {
+    max-width: 400px; /* Adjust the width of the logo */
+    height: auto;
+    margin-bottom: 10px;
+}
 
 .footer-text {
-    font-size: 14px; /* Font size for footer text */
-    color: #090909; /* Text color */
-    margin: 0; /* Remove default margin */
-    font-family: 'Poppins', sans-serif;
-    margin-top: 60px;
-    justify-content: center;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
 }
+.card-footer h1{
+    color: #F6C90E;
+    font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Message Us Button (right) */
+.footer-right .message-us-btn {
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.footer-right .message-us-btn i {
+    margin-right: 8px;
+}
+
+.footer-right .message-us-btn:hover {
+    background-color: #0056b3; /* Hover background color */
+}
+
+
+/* Footer Section */
+
