@@ -235,7 +235,7 @@ nav {
   font-weight: bold; /* Bold text */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for depth */
   margin: 0; /* Remove default margin */
-  padding: 20px; /* Add some padding */
+
 }
 
 /* Styling for the p tag in the overlay */
@@ -243,7 +243,7 @@ nav {
   font-size: 18px; /* Moderate font size for the subtitle */
   color: #f0f0f0; /* Light color for contrast */
   text-align: center; /* Center the text */
-  margin: 10px 0; /* Space around the paragraph */
+  margin: 0px 0; /* Space around the paragraph */
   letter-spacing: 1px; /* Slight letter spacing for readability */
 }
 
