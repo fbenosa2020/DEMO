@@ -608,8 +608,8 @@ nav {
 }
 
 .testimonial-profile {
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
+    width: 140px; /* Adjust size as needed */
+    height: 110px; /* Adjust size as needed */
     border-radius: 50%; /* Circular profile picture */
     object-fit: cover; /* Ensure image fits within the circle */
     margin-bottom: 10px; /* Space between image and text */
@@ -620,6 +620,7 @@ nav {
 
 .testimonial:hover {
     transform: translateY(-10px); /* Slightly lift the testimonial on hover */
+    
 }
 
 
@@ -711,6 +712,7 @@ nav {
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
+    object-fit: contain;
 }
 
 .grid-item p {
