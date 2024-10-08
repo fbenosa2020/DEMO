@@ -608,10 +608,10 @@ nav {
 }
 
 .testimonial-profile {
-    width: 140px; /* Adjust size as needed */
-    height: 110px; /* Adjust size as needed */
+    width: 190px; /* Adjust size as needed */
+    height: 150px; /* Adjust size as needed */
     border-radius: 50%; /* Circular profile picture */
-    object-fit: cover; /* Ensure image fits within the circle */
+    object-fit: contain; /* Ensure image fits within the circle */
     margin-bottom: 10px; /* Space between image and text */
     display: block;
     margin-left: auto;
@@ -973,6 +973,7 @@ html {
     max-width: 400px; /* Adjust the width of the logo */
     height: auto;
     margin-bottom: 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
 }
 
 .footer-text {
@@ -1006,6 +1007,12 @@ html {
 .footer-right .message-us-btn:hover {
     background-color: #0056b3; /* Hover background color */
 }
+
+.footer-logo:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    opacity: 0.8; /* Change opacity */
+}
+
 
 
 /* Footer Section */
