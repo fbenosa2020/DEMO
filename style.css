@@ -366,8 +366,8 @@ nav {
     .social-icons {
         justify-content: center;
     }
-}/* Styling for the Find Us text */
-
+}
+/* Styling for the Find Us text */
 
 
 /* about us!!!!!!!!!!!!!!!!!! */
@@ -569,6 +569,101 @@ nav {
         height: 400px; /* Smaller height for mobile */
     }
 }
+
+
+/*key players*/ .container1 {
+            width: 80%;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+          
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #ffffff;
+            margin-bottom: 40px;
+            letter-spacing: 1px;
+            font-family: "Protest Strike", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 15px;
+          
+            border-radius: 12px;
+        }
+
+        .section img {
+            width: 45%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border: 4px solid #F6C90E; /* Image border color */
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+        }
+
+        .description {
+            width: 50%;
+            padding-left: 30px;
+        }
+
+        .description h2 {
+            font-size: 1.6rem;
+            color: #F6C90E;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .description p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #ffffff;
+        }
+
+        /* Alternate layout for the second section */
+        .section.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .section.reverse .description {
+            padding-left: 0;
+            padding-right: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+            }
+            
+            .section.reverse {
+                flex-direction: column;
+            }
+
+            .section img {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .description {
+                padding-left: 0;
+                width: 100%;
+            }
+        }
+/*key players*/
 
 .testimonial-section {
     position: relative;
@@ -910,19 +1005,33 @@ html {
 .offer-item h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #000000;
 }
 
 .offer-item p {
     font-size: 1rem;
-    color: #777;
+    color: #000000;
     margin: 0;
 }
 
 .offer-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #495E57;
 }
+
+.offer-item:hover h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.offer-item:hover p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
 
 @media (max-width: 992px) {
     .offer-container {
