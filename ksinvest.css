@@ -32,7 +32,8 @@ header {
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
+    justify-content: flex-end;
+     /* Align items to the right */
 }
 
 nav ul li {
@@ -40,12 +41,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #e74c3c;
+    color: gold;
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s ease;
     font-family: "Poppins", sans-serif;
-    font-weight: 800;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -60,8 +61,8 @@ nav ul li a {
 
 /* Hover Effect */
 nav ul li a:hover {
-    color: #ffffff;                     /* Change text color on hover */
-    background-color: #e74c3c;         /* Add background color on hover */
+    color: #000000;                     /* Change text color on hover */
+    background-color: gold;         /* Add background color on hover */
     border-radius: 5px;                /* Rounded corners */
     transform: scale(1.05);             /* Slightly enlarge the link */
 }
@@ -98,63 +99,75 @@ nav ul li a:hover:after {
     transition: all 0.3s ease;
 }
 /* Hero Section */
+
 #hero {
-    background: url('ks2.jpg') no-repeat center center/cover;
-    height: 100vh;
+    height: 100vh; /* Full screen height */
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('kope.png') no-repeat center center/cover; /* Background image */
+    color: white;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: fadeInUp 1s forwards;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeInUp 1.5s forwards;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.918);
+    background-color:gold;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+    text-decoration: none;
+    font-family: poppins;
+    font-weight: 700;
+   
+    
+}
+
+.btn:hover {
+    background-color: #000000;
+    transform: scale(1.05);
     color: white;
     
 }
 
-.hero-text h2 {
-    font-size: 3.5em;            /* Large font size */
-    font-weight: 700;           /* Bold text */
-    color: rgb(255, 0, 0);      /* Bright red color */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Adding a shadow effect */
-    margin: 20px 0;             /* Margin for spacing */
-    transition: transform 0.3s, color 0.3s; /* Transition for hover effect */
-}
-
-/* Hover Effect */
-.hero-text h2:hover {
-    transform: translateY(-5px); /* Slight upward movement on hover */
-    color: rgb(255, 102, 102); /* Change color on hover for a softer tone */
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
-.hero-text p {
-    font-size: 2.2em;                     /* Font size */
-    margin: 15px 0 30px;                  /* Margin for spacing */
-    color: #ff0404;                           /* Darker text color for readability */
-    line-height: 1.6;                     /* Increased line height for better readability */
-    text-align: center;                    /* Center-align the text */
-    transition: color 0.3s, transform 0.3s; /* Transition for hover effect */
-   font-weight: 500;
-}
-
-/* Hover Effect */
-.hero-text p:hover {
-    color: rgb(255, 0, 0);                /* Change color on hover */
-    transform: translateY(-3px);          /* Slight upward movement on hover */
-}
-
-
-.hero-text .btn {
-    background: #e74c3c;
-    color: #fffffff9;
-    padding: 12px 30px;
-    text-decoration: none;
-    font-size: 1.1em;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.hero-text .btn:hover {
-    background: #c0392b;
-}
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
@@ -203,7 +216,7 @@ nav ul li a:hover:after {
 #features h2 {
     font-size: 2.5em;
     margin-bottom: 30px;
-    color: #34495e;
+    color: #000000;
 }
 
 .features-grid {
@@ -213,11 +226,11 @@ nav ul li a:hover:after {
 }
 
 .feature-box {
-    background: white;
+    background: rgb(12, 12, 12);
     padding: 20px;
     margin: 10px;
     width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     transition: box-shadow 0.3s ease;
     border-radius: 10px;
     text-align: center;
@@ -226,17 +239,17 @@ nav ul li a:hover:after {
 .feature-box i {
     font-size: 3em; /* Size of the icon */
     margin-bottom: 15px;
-    color: #e74c3c; /* Icon color */
+    color: gold; /* Icon color */
 }
 
 .feature-box h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-    color: #34495e;
+    color: #ffffff;
 }
 
 .feature-box p {
-    color: #7f8c8d;
+    color: gold;
 }
 
 .feature-box:hover {
@@ -251,7 +264,7 @@ nav ul li a:hover:after {
 
 
 footer {
-    background-color: #34495e;
+    background-color: #030303;
     padding: 30px 0;
     color: white;
     text-align: center;
