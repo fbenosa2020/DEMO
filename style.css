@@ -23,7 +23,7 @@ body {
 /* Navbar styles */
 .navbar {
     display: flex;
-    justify-content: space-between;
+     justify-content: space-around; /* Distributes the items evenly */
     align-items: center;
     padding: 15px 30px;
     background-color: #495E57;
@@ -50,6 +50,8 @@ body {
     display: flex;
     justify-content: center;
     flex-grow: 1;
+
+    
 }
 
 .menu li {
@@ -58,9 +60,11 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px;
     display: block;
+    font-family:poppins;
+    margin-left: px;
 }
 
 /* Dropdown styling */
@@ -141,6 +145,7 @@ nav {
      font-style: normal;
     transition: color 1s;
     color: #F6C90E;
+  
 }
 
 .navbar h1:hover {
@@ -150,7 +155,7 @@ nav {
 /* Contact Info Styles */
 .contact-info {
     background-color: #ffffff;
-    color: rgb(7, 7, 7);
+    color: rgb(0, 0, 0);
     padding: 10px 0;
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -571,21 +576,24 @@ nav {
 }
 
 
-/*key players*/ .container1 {
-            width: 80%;
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: rgb(0, 0, 0);
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-          
-        }
+/*key players*/ 
+.container1 {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* for Safari support */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* soft shadow for depth */
+  
+}
+
 
         h3 {
             text-align: center;
             font-size: 2.8rem;
-            color: #ffffff;
+            color: #F6C90E;
             margin-bottom: 40px;
             letter-spacing: 1px;
             font-family: "Protest Strike", sans-serif;
@@ -599,22 +607,40 @@ nav {
             align-items: center;
             margin-bottom: 40px;
             padding: 15px;
-          
+        
             border-radius: 12px;
         }
 
         .section img {
             width: 45%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            border: 4px solid #F6C90E; /* Image border color */
+            border-radius: 24px; /* More rounded corners */
+            box-shadow: 0 8px 20px  #F6C90E; /* Softer and larger shadow for elegance */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 4px solid rgba(255, 255, 255, 0.2); /* Semi-transparent border for glass effect */
+            backdrop-filter: blur(10px); /* Frosted-glass effect on the border */
+            background: rgba(255, 255, 255, 0.1); /* Transparent background for the glass effect */
+            position: relative; /* To position the pseudo-element */
         }
-
+        
+        .section img::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 32px; /* More curved border */
+            border: 2px solid rgba(255, 255, 255, 0.3); /* Elegant double border */
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            z-index: -1; /* Place behind the image */
+        }
+        
         .section img:hover {
-            transform: scale(1.05);
+            transform: scale(1.05); /* Slight hover effect */
+            box-shadow: 0 10px 25px rgba(146, 8, 226, 0.966); /* Classy elevated shadow on hover */
         }
+        
 
         .description {
             width: 50%;
