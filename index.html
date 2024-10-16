@@ -18,7 +18,8 @@
 
     
 </head>
-<body oncontextmenu="return false;">
+<body oncontextmenu="return false;" >
+    <!----->
 
     <div class="contact-info">
         <p>Phone: +1781-244-0009 | Email: achillesvirtualagency@gmail.com</p>
@@ -42,9 +43,22 @@
                
             </div>
         </ul>
+        <div class="hamburger">
+            &#9776; <!-- Unicode for the hamburger icon -->
+        </div>
     </nav>
 </div>
 </div>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        // Toggle the active class on click
+        navLinks.classList.toggle('active');
+    });
+</script>
+
 
     <section class="content-section">
         <img src="achilles-removebg-preview.png" alt="Achilles Logo" class="overlay-logo"> <!-- Logo for overlay -->
