@@ -20,10 +20,33 @@ body {
     position: relative; /* Ensure relative positioning for overlay handling */
 }
 
+
+/* Media Queries for Better Responsiveness */
+@media screen and (max-width: 1024px) {
+    body {
+        background-size: contain; /* Ensure image fits within smaller screens */
+        background-position: center top; /* Adjust position for better fit */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* Adjust size for tablet screens */
+        background-position: center top; /* Keep the image at the top for better alignment */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-size: cover; /* For mobile screens, maintain cover */
+        background-position: center; /* Keep the image centered */
+    }
+}
+
 /* Navbar styles */
 .navbar {
     display: flex;
-     justify-content: space-around; /* Distributes the items evenly */
+    justify-content: space-between; /* Adjusted for better alignment */
     align-items: center;
     padding: 15px 30px;
     background-color: #495E57;
@@ -34,12 +57,13 @@ body {
 }
 
 .logo img {
-    height: 40px;
-    width: auto;
+    height: 50px;
+    width: 60px;
+    margin-left:-20px ;
 }
 
 .hamburger {
-    display: none;
+    display: none; /* Hidden on large screens */
     font-size: 24px;
     cursor: pointer;
     color: white;
@@ -50,8 +74,7 @@ body {
     display: flex;
     justify-content: center;
     flex-grow: 1;
-
-    
+    gap: 20px; /* Add spacing between links */
 }
 
 .menu li {
@@ -63,32 +86,7 @@ body {
     color: rgb(255, 255, 255);
     padding: 10px;
     display: block;
-    font-family:poppins;
-    margin-left: px;
-}
-
-/* Dropdown styling */
-.dropdown {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    display: none;
-    min-width: 150px;
-}
-
-.dropdown li a {
-    color: white;
-    padding: 10px;
-    display: block;
-    text-align: left;
-}
-
-.dropdown li a:hover {
-    background-color: #555;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Fixed navbar */
@@ -136,21 +134,73 @@ nav {
     width: 100%; /* Underline expands fully */
 }
 
-
 .navbar h1 {
-    margin-top: -45px;
-    margin-left: 50px;
+    margin-top: -53px;
+    margin-left: 49px;
     font-family: "Monoton", sans-serif;
     font-weight: 400;
-     font-style: normal;
+    font-style: normal;
     transition: color 1s;
     color: #F6C90E;
-  
 }
 
 .navbar h1:hover {
     color: #ffffff;
 }
+
+/* Media Queries for Responsive Design */
+/* Navbar styles remain the same */
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #495E57;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Shown when the 'active' class is added */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile/tablets */
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .navbar h1 {
+        font-size: 20px; /* Adjust font size for smaller screens */
+        margin-left: 10px;
+    }
+
+    .logo img {
+        height: 30px; /* Reduce logo size on phones */
+    }
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show on mobile/tablet screens */
+    }
+}
+
+/*END OF NAVBAR*/
 
 /* Contact Info Styles */
 .contact-info {
@@ -167,74 +217,6 @@ nav {
     margin: 0;
     font-size: 14px;
 }
-
-
-/* Responsive styles for small screens */
-@media (max-width: 768px) {
-    .nav-links {
-        position: absolute;
-        right: 0;
-        height: 100vh;
-        top: 60px;
-        width: 100%;
-        max-width: 300px;
-        background-color: #333;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-        transform: translateX(100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 2;
-    }
-
-    .nav-links .menu {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links a {
-        width: 100%;
-        padding: 15px 0;
-    }
-
-    .hamburger {
-        display: block;
-        color: white;
-        font-size: 30px;
-        margin-left: auto;
-    }
-
-    .navbar h1 {
-        font-size: 18px;
-        margin-left: 0;
-    }
-
-    .logo img {
-        height: 35px;
-    }
-
-    /* Toggle open the mobile menu */
-    .nav-active .nav-links {
-        transform: translateX(0%);
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        padding: 10px;
-    }
-
-    .logo img {
-        height: 30px;
-    }
-
-    .navbar h1 {
-        font-size: 16px;
-        margin-top: 0;
-    }
-}
-
 
 /******* Section Styles*******/
 .content-section {
@@ -691,74 +673,156 @@ nav {
         }
 /*key players*/
 
+/* Testimonial Section Styling */
 .testimonial-section {
     position: relative;
     padding: 50px;
     background-color: #f4f4f4;
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden; /* Prevents scroll overflow */
+    overflow: hidden;
 }
 
 .testimonial-section h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 30px;
     font-weight: 600;
     color: #333;
+    animation: fadeIn 1s ease-in-out; /* Title fades in */
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Testimonial Container */
 .testimonial-container {
     display: flex;
-    flex-wrap: wrap;
+    overflow: hidden; /* Ensures only one testimonial is visible */
     justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    position: relative;
+    transition: all 0.5s ease-in-out; /* Smooth sliding for transitions */
 }
 
+/* Individual Testimonial Box */
 .testimonial {
     background-color: #ffffff;
     color: #333;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.539);
-    padding: 20px;
-    max-width: 300px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    padding: 30px;
+    width: 350px;
+    max-width: 100%;
     text-align: center;
-    transform: translateY(0); /* Default position */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    position: relative;
+    transform: scale(0.95); /* Slightly shrinks */
+    transition: transform 0.5s ease; /* Smooth transition */
+    flex-shrink: 0;
 }
 
+/* Active Testimonial */
+.testimonial.active {
+    transform: scale(1); /* Grows on active */
+}
+
+/* Profile Picture */
 .testimonial-profile {
-    width: 190px; /* Adjust size as needed */
-    height: 150px; /* Adjust size as needed */
-    border-radius: 50%; /* Circular profile picture */
-    object-fit: contain; /* Ensure image fits within the circle */
-    margin-bottom: 10px; /* Space between image and text */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    animation: bounceIn 1.5s ease-in-out;
 }
 
-.testimonial:hover {
-    transform: translateY(-10px); /* Slightly lift the testimonial on hover */
-    
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
 }
 
-
-/* Hover effect to move testimonial up */
-.testimonial:hover {
-    transform: translateY(-10px); /* Adjust this value to control the amount of upward movement */
-}
-
+/* Testimonial Text */
 .testimonial p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    font-style: italic;
+    color: #555;
 }
 
 .client-name {
     font-weight: bold;
-    color: #FFD700; /* Gold text for client names */
+    color: #FFD700;
+    animation: fadeInName 1s ease-in;
+}
+
+@keyframes fadeInName {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hover Effect for Testimonial */
+.testimonial:hover {
+    transform: scale(1.05) translateY(-10px); /* Pops up slightly on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+}
+
+/* Testimonial Controls (Navigation Arrows) */
+.testimonial-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    margin: 30px auto 0;
+    cursor: pointer;
+}
+
+.testimonial-controls span {
+    font-size: 30px;
+    color: #FFD700;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.testimonial-controls span:hover {
+    color: #333; /* Changes color when hovered */
+}
+
+/* Rotating Background for Testimonial Section */
+.testimonial-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, #FFD700, transparent 70%);
+    animation: rotateBg 20s infinite linear;
+    z-index: -1; /* Behind everything */
+}
+
+@keyframes rotateBg {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Responsive for mobile */
