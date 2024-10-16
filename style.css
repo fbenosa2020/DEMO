@@ -1139,9 +1139,9 @@ html {
 /*end*/
 
 /* Ensure the footer is styled well */
-/* Ensure the footer stays at the bottom and is laid out with flexbox */
+/* Card Footer */
 .card-footer {
-    background-color: #f8f9fa; /* Adjust background color as needed */
+    background-color: #f8f9fa;
     width: 100%;
     position: relative;
     bottom: 0;
@@ -1149,30 +1149,32 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px; /* Adjust padding */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
-/* Social media icons (left) */
+/* Social Media Icons (left) */
 .footer-left a {
-    color: #333; /* Social icon color */
+    color: #333;
     font-size: 20px;
     margin-right: 15px;
     text-decoration: none;
 }
 
 .footer-left a:hover {
-    color: #007bff; /* Hover color */
+    color: #007bff;
 }
 
-/* Center content (logo and text) */
+/* Center Content (Logo and Text) */
 .footer-center {
     text-align: center;
+    margin: 10px 0; /* Margin to add spacing for responsiveness */
 }
 
 .footer-logo {
-    max-width: 400px; /* Adjust the width of the logo */
+    max-width: 250px; /* Adjusted for responsiveness */
     height: auto;
     margin-bottom: 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .footer-text {
@@ -1180,23 +1182,25 @@ html {
     font-size: 14px;
     color: #333;
 }
-.card-footer h1{
+
+.card-footer h1 {
     color: #F6C90E;
     font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/* Message Us Button (right) */
+/* Message Us Button (Right) */
 .footer-right .message-us-btn {
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #007bff;
+    color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     display: flex;
     align-items: center;
     font-size: 16px;
+    margin-top: 10px;
 }
 
 .footer-right .message-us-btn i {
@@ -1204,15 +1208,98 @@ html {
 }
 
 .footer-right .message-us-btn:hover {
-    background-color: #0056b3; /* Hover background color */
+    background-color: #0056b3;
 }
 
 .footer-logo:hover {
-    transform: scale(1.05); /* Slightly enlarge the image */
-    opacity: 0.8; /* Change opacity */
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
+/* Media Queries for Responsiveness */
 
+/* For large screens (desktops) */
+@media (min-width: 1200px) {
+    .card-footer {
+        padding: 30px 60px; /* Increase padding for large screens */
+    }
 
-/* Footer Section */
+    .footer-logo {
+        max-width: 400px; /* Larger logo for big screens */
+    }
 
+    .footer-left a {
+        font-size: 24px; /* Increase icon size for large screens */
+    }
+
+    .footer-right .message-us-btn {
+        font-size: 18px;
+    }
+}
+
+/* For medium screens (tablets, small laptops) */
+@media (max-width: 991px) {
+    .card-footer {
+        padding: 20px;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    .footer-center {
+        margin-bottom: 15px;
+    }
+
+    .footer-right {
+        margin-top: 15px; /* Adjust margin for spacing */
+    }
+
+    .footer-logo {
+        max-width: 300px;
+    }
+
+    .footer-left a {
+        font-size: 18px;
+    }
+
+    .footer-right .message-us-btn {
+        font-size: 16px;
+    }
+}
+
+/* For small screens (mobile phones) */
+@media (max-width: 767px) {
+    .card-footer {
+        padding: 15px 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        width: 100%; /* Full width for social icons and button */
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-center {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo {
+        max-width: 200px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+    }
+
+    .footer-left a {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    .footer-right .message-us-btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
