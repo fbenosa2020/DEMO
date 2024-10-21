@@ -99,18 +99,90 @@ nav ul li a:hover:after {
     transition: all 0.3s ease;
 }
 /* Hero Section */
-
 #hero {
     height: 100vh; /* Full screen height */
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('kope.png') no-repeat center center/cover; /* Background image */
+                url('STAGE.jpg') no-repeat center center/cover; /* Background image */
     color: white;
-    text-align: center;
     position: relative;
     overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.hero-video {
+    flex: 1;
+    margin-right: 20px; /* Add some spacing between the video and text */
+    border: 10px solid #ffffff4d; /* Solid border for the frame */
+    border-radius: 10px; /* Rounded corners for the border */
+    padding: 5px; /* Padding between the border and the video */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
+}
+
+.hero-video video {
+    height: 500px;   /* Set a specific height */
+    width: 100%;     /* Adjust width to fit the container */
+    object-fit: cover; /* Ensure video doesn't stretch */
+    border-radius: 10px; /* Keep the same rounding for the video */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hero-video video {
+        height: auto; /* Allow height to adjust on smaller screens */
+        max-height: 400px; /* Limit maximum height */
+    }
+}
+.hero-logo {
+    width: 450px; /* Increase the size for better visibility */
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: 100px;
+
+    /* Add a shadow/glow effect */
+    box-shadow: 0 4px 25px rgba(255, 215, 0, 0.7); /* Soft gold glow for enhancement */
+    
+    /* Add a gradient border */
+    border: 3px solid; /* Solid border to allow gradient */
+    border-image: linear-gradient(to right, gold, rgba(255, 255, 255, 0.5)) 1; /* Gradient border effect */
+    border-radius: 10px; /* Rounded corners for a polished look */
+
+    /* Optional: Add a background */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for contrast */
+    padding: 10px; /* Padding inside the background */
+
+    /* Hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.hero-logo:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 6px 30px rgba(255, 215, 0, 0.9); /* Brighter glow on hover */
+}
+
+
+.hero-logo:hover {
+    /* Add an animation effect when the logo is hovered over */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+
+
+.hero-text {
+    flex: 1;
+    text-align: left; /* Align text to the left */
 }
 
 .hero-text h2 {
@@ -119,6 +191,7 @@ nav ul li a:hover:after {
     opacity: 0;
     transform: translateY(-50px);
     animation: fadeInUp 1s forwards;
+    color: gold;
 }
 
 .hero-text p {
@@ -133,7 +206,7 @@ nav ul li a:hover:after {
     padding: 15px 30px;
     font-size: 1.2rem;
     color: rgba(0, 0, 0, 0.918);
-    background-color:gold;
+    background-color: gold;
     border: none;
     border-radius: 50px;
     text-transform: uppercase;
@@ -142,17 +215,14 @@ nav ul li a:hover:after {
     opacity: 0;
     animation: fadeInUp 2s forwards;
     text-decoration: none;
-    font-family: poppins;
+    font-family: Poppins;
     font-weight: 700;
-   
-    
 }
 
 .btn:hover {
     background-color: #000000;
     transform: scale(1.05);
     color: white;
-    
 }
 
 /* Animations */
@@ -166,6 +236,13 @@ nav ul li a:hover:after {
         transform: translateY(0);
     }
 }
+@media (max-width: 768px) {
+    .hero-video video {
+        height: 250px; /* Smaller height for mobile screens */
+        width: auto;
+    }
+}
+
 
 
 
@@ -205,11 +282,353 @@ nav ul li a:hover:after {
     }
 }
 
+
 /*section1*/
+/* Style for the About Section */
+#about {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 60px 20px; /* Spacing around the section */
+    text-align: center; /* Center align text */
+}
+
+#about h2 {
+    font-size: 2.5rem; /* Larger heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Darker text color */
+}
+
+#about p {
+    font-size: 1.1rem; /* Slightly larger text for readability */
+    line-height: 1.6; /* Spacing between lines for readability */
+    margin-bottom: 20px; /* Space below each paragraph */
+    color: #555; /* Softer text color */
+    max-width: 800px; /* Restrict paragraph width for readability */
+    margin: 0 auto 20px auto; /* Center paragraph */
+}
+
+#about .btn {
+    display: inline-block; /* Make the button an inline element */
+    padding: 12px 25px; /* Padding inside the button */
+    background-color: gold; /* Blue background for the button */
+    color: #000000; /* White text */
+    font-size: 1rem; /* Normal button text size */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+#about .btn:hover {
+    background-color: #0a0a0a;
+    color: white; /* Darker blue on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+    #about p {
+        font-size: 1rem; /* Adjust paragraph font size on mobile */
+    }
+}
+
+
+/* services*/
+
+/* General Styles */
+
+/* Style for the Services and Form Section */
+/* Style for the Services and Form Section */
+#services-form {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: space-between; /* Space out the items */
+    padding: 60px 20px; /* Spacing around the section */
+    background-color: #000000; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+}
+
+.services-form-container {
+    display: flex; /* Flexbox for inner container */
+    flex: 1; /* Allow both children to take equal space */
+}
+
+/* Services Section Styles */
+.services {
+    flex: 1; /* Take equal space */
+    margin-right: 20px; /* Space between services and form */
+    color: #ddd; /* Text color */
+}
+
+.services h2 {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+    color: rgb(250, 249, 244); /* Accent color for headings */
+    border-bottom: 2px solid gold; /* Underline for professionalism */
+    padding-bottom: 10px; /* Padding below heading */
+    text-align: center;
+}
+
+.services-grid {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between items */
+    margin-top: 20px; /* Space above grid */
+}
+
+.service-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside items */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.952); /* Shadow for items */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.service-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker background on hover */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Deeper shadow on hover */
+    transform: translateY(-5px) rotate(1deg); /* Slight lift and rotation effect */
+}
+
+
+
+.services ul {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+}
+
+.services ul li {
+    margin-bottom: 15px; /* Space between list items */
+    font-size: 1.1rem; /* Slightly larger text for clarity */
+}
+
+/* Highlighted Headers for Categories */
+.services h3 {
+    font-size: 1.3rem; /* Heading size for categories */
+    margin: 15px 0; /* Space above and below */
+    color: gold; /* Accent color for headings */
+    padding-bottom: 5px; /* Padding below heading */
+}
+
+/* Checkmark List Styles */
+.check-list {
+    list-style-type: none; /* Remove default list style */
+    padding-left: 0; /* Remove padding */
+}
+
+.check-list li {
+    position: relative; /* Positioning for the checkmark */
+    padding-left: 25px; /* Space for the checkmark */
+    margin-bottom: 10px; /* Space below each item */
+    font-size: 1.1rem; /* Slightly larger text for clarity */
+    color: #ddd; /* Match text color */
+}
+
+.check-list li::before {
+    content: '✔'; /* Checkmark symbol */
+    color: gold; /* Gold color for checkmark */
+    position: absolute; /* Position checkmark */
+    left: 0; /* Align to the left */
+    font-size: 1.2rem; /* Size of the checkmark */
+}
+
+/* Form Section Styles */
+.form {
+    flex: 1; /* Take equal space */
+    background-color: #fff; /* White background for form */
+    border: 1px solid #ddd; /* Light border for form */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside form */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 650px; /* Fixed height for form */
+}
+
+.form h2 {
+    font-size: 2rem; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+    color: rgb(0, 0, 0); /* Accent color for headings */
+    text-align: center;
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-top: 10px; /* Space above labels */
+    font-weight: bold; /* Bold text for labels */
+    color: #555; /* Softer text color */
+}
+
+input, textarea {
+    width: 100%; /* Full width input */
+    padding: 12px; /* Padding inside input */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Normal font size */
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+input:focus, textarea:focus {
+    border-color: gold; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button.btn {
+    background-color: gold; /* Button background color */
+    color: #141414; /* Button text color */
+    padding: 12px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Normal font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button.btn:hover {
+    background-color: #000000; /* Darker button on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    #services-form {
+        flex-direction: column; /* Stack on smaller screens */
+    }
+    .services {
+        margin-right: 0; /* Remove margin on smaller screens */
+        margin-bottom: 20px; /* Space below services */
+    }
+    .form {
+        margin-top: 20px; /* Space above form when stacked */
+    }
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+    .service-item {
+        margin-bottom: 20px; /* Space below service items */
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+    }
+}
+
+/*CEO  SECTION*/
+#ceo-section {
+    padding: 60px 20px; /* Spacing around the section */
+    background-color: #ffffff; /* Background color for the section */
+    color: #000000; /* Text color */
+    text-align: center; /* Center-align text */
+}
+
+.ceo-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    gap: 40px; /* Space between image and text */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.ceo-photo {
+    border-radius: 50%; /* Circular image */
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Cover to maintain aspect ratio */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Shadow for image */
+}
+
+.ceo-description {
+    max-width: 600px; /* Limit width of text */
+    margin-top: 30px;
+}
+
+.social-media {
+    margin-top: 20px; /* Space above social media icons */
+}
+
+.social-media a {
+    color: gold; /* Color for icons */
+    margin: 0 10px; /* Space between icons */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s; /* Smooth transition */
+}
+
+.social-media a:hover {
+    color: rgb(0, 0, 0); /* Change color on hover */
+}
+
+/*booking section */
+/* Booking Section */
+#booking-section {
+    padding: 40px 20px; /* Spacing around the section */
+    background-color: #141414; /* Background color */
+    color: #ddd; /* Text color */
+    text-align: left; /* Align text to the left */
+    margin-top: 40px; /* Space above the section */
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between left and right content */
+    align-items: center; /* Center items vertically */
+}
+
+.booking-info {
+    flex: 1; /* Allow this section to take space */
+}
+
+.booking-action {
+    text-align: right; /* Align button and text to the right */
+}
+
+#booking-section h2 {
+    font-size: 2rem; /* Heading size */
+    color: gold; /* Gold color for the heading */
+    margin-bottom: 10px; /* Space below heading */
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 100px;
+}
+
+#booking-section p {
+    font-size: 1.1rem; /* Slightly larger text */
+    margin-bottom: 20px; /* Space below text */
+    margin-right: 100px;
+    margin-top: 5px;
+    margin-left: 200px;
+    
+}
+
+#booking-section .btn1 {
+    background-color: gold; /* Button background color */
+    color: #141414; /* Button text color */
+    padding: 12px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Normal font size */
+    transition: none; /* Remove transition effect */
+    margin-right: 100px;
+}
+
+#booking-section .btn:hover {
+    background-color: #000000; /* Darker button on hover */
+    color: white; /* Change text color on hover */
+    /* Removed any transition effects */
+}
+#booking-section h2 i {
+    margin-right: 0px; /* Space between the icon and text */
+    color: gold; /* Color of the icon */
+    font-size: 2.5rem; /* Size of the icon */
+}
+
+
+
+
 /* Features Section */
 #features {
     padding: 60px 0;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -223,34 +642,43 @@ nav ul li a:hover:after {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    
 }
 
 .feature-box {
-    background: rgb(12, 12, 12);
-    padding: 20px;
-    margin: 10px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    transition: box-shadow 0.3s ease;
-    border-radius: 10px;
-    text-align: center;
+    background: gold; /* Background color */
+    padding: 20px; /* Inner spacing */
+    margin: 10px; /* Spacing around boxes */
+    width: 30%; /* Width of each box */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Initial shadow */
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for effects */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Centered text */
+    margin-bottom: 20px;
+}
+
+.feature-box:hover {
+    background-color: rgb(255, 217, 0); /* Slightly darker gold on hover */
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0); /* Deeper shadow on hover */
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
 .feature-box i {
-    font-size: 3em; /* Size of the icon */
-    margin-bottom: 15px;
-    color: gold; /* Icon color */
+    font-size: 3em; /* Icon size */
+    margin-bottom: 15px; /* Space below icon */
+    color: rgb(0, 0, 0); /* Icon color */
 }
 
 .feature-box h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #ffffff;
+    font-size: 1.5em; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+    color: #020202; /* Heading color */
 }
 
 .feature-box p {
-    color: gold;
+    color: rgb(0, 0, 0); /* Paragraph color */
 }
+
 
 .feature-box:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -262,11 +690,385 @@ nav ul li a:hover:after {
     }
 }
 
+/*contact section*/
+#contact-section {
+    padding: 40px 20px; /* Spacing around the section */
+    background-color: #141414; /* Background color */
+    color: rgb(255, 255, 255); /* Text color */
+    text-align: center; /* Center the text */
+}
+.contactp{
+    color: #000000;
+}
+
+.contact-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Space between grid items */
+    margin-top: 20px; /* Space above grid */
+}
+
+/* Contact Item Styles */
+.contact-item {
+    background: rgb(255, 255, 255); /* Semi-transparent background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside items */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.contact-item i {
+    font-size: 2em; /* Size of the icon */
+    color: gold; /* Icon color */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.contact-item h3 {
+    margin: 10px 0; /* Space above and below heading */
+    color: rgb(0, 0, 0); /* Gold color for heading */
+}
+
+.social-media1 {
+    margin-top: 30px; /* Space above social media */
+}
+
+.social-icon1 {
+    font-size: 1.5em; /* Size of the social media icons */
+    color: gold; /* Color of the icons */
+    margin: 0 10px; /* Space between icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+.social-icon1:hover {
+    color: #fcfcfc; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge icon on hover */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a soft glow effect */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
+    .social-media {
+        text-align: center; /* Center social media icons */
+    }
+}
+
+/*ceo about*/
+#ceo-section1 {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    padding: 40px 20px; /* Spacing around the section */
+    background-color: #ffffff; /* Background color */
+    color: #000000; /* Text color */
+}
+
+.ceo-content1 {
+    display: flex; /* Use flexbox for inner layout */
+    flex-direction: row; /* Horizontal layout */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px; /* Max width for content */
+    margin: 0 auto; /* Center content */
+}
+
+.ceo-image {
+    width: 250px; /* Image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    margin-right: 30px; /* Space between image and text */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+}
+
+.ceo-details1 {
+    flex: 1; /* Allow details section to take remaining space */
+}
+
+#ceo-about {
+    text-align: left; /* Align text to the left */
+}
+
+#ceo-about h2 {
+    font-size: 2.5rem; /* Heading size */
+    color: gold; /* Gold color for the heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+#ceo-about .ceo-list {
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+}
+
+#ceo-about .ceo-list li {
+    position: relative; /* Positioning for the checkmark */
+    padding-left: 25px; /* Space for the checkmark */
+    margin: 10px 0; /* Space above and below */
+    font-size: 1.5rem; /* Subheading size */
+    color: #000000; /* White color for subheadings */
+}
+
+#ceo-about .ceo-list li::before {
+    content: '✔'; /* Checkmark symbol */
+    color: gold; /* Gold color for checkmark */
+    position: absolute; /* Position checkmark */
+    left: 0; /* Align to the left */
+    font-size: 1.5rem; /* Size of the checkmark */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    #ceo-section1 {
+        flex-direction: column; /* Stack on smaller screens */
+        text-align: center; /* Center text on small screens */
+    }
+    
+    .ceo-image {
+        margin: 0 auto; /* Center image */
+    }
+    
+    .ceo-details1 {
+        margin-top: 20px; /* Space above details */
+    }
+}
+
+/*ticket section*/
+#tickets-section {
+    padding: 40px 20px; /* Spacing around the section */
+    background-color: #141414; /* Background color */
+    color: #ddd; /* Text color */
+    text-align: center; /* Center the text */
+}
+
+.tickets-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space out options */
+    margin-top: 20px; /* Space above options */
+}
+
+.ticket-option {
+    background-color: white; /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the option */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    width: 45%; /* Width of each option */
+}
+
+.ticket-option:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.ticket-image {
+    width: 100%; /* Full width for images */
+    border-radius: 10px; /* Rounded corners for images */
+    height: 200px; /* Set a specific height */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+.ticket-option h3 {
+    margin: 15px 0; /* Space above and below heading */
+    color: gold; /* Gold color for headings */
+}
+
+.ticket-option p {
+    margin-bottom: 20px; /* Space below paragraph */
+    color: #000000; /* Paragraph color */
+}
+
+.btn {
+    background-color: gold; /* Button background color */
+    color: #141414; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: #000000; /* Darker button on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .tickets-container {
+        flex-direction: column; /* Stack options on smaller screens */
+    }
+    .ticket-option {
+        width: 90%; /* Make options take up more width on smaller screens */
+        margin: 10px auto; /* Center options */
+    }
+}
+
+/*networking section*/
+#networking-section {
+    padding: 40px 20px; /* Spacing around the section */
+    background-color: #ffffff; /* Background color */
+    color: #000000; /* Text color */
+    text-align: center; /* Center the title and subtitle */
+}
+
+.networking-title {
+    font-size: 2.5rem; /* Title size */
+    color: gold; /* Color for the title */
+    margin-bottom: 10px; /* Space below the title */
+}
+
+.networking-subtitle {
+    font-size: 1.2rem; /* Subtitle size */
+    margin-bottom: 30px; /* Space below the subtitle */
+}
+
+.grid-container {
+    display: grid; /* Use CSS grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside each grid item */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.grid-item h3 {
+    margin-bottom: 15px; /* Space below headings */
+    color: gold; /* Gold color for headings */
+}
+
+.grid-item p {
+    color: #000000; /* Paragraph color */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+}
+
+/*review section*/
+#reviews-section {
+    padding: 40px 20px; /* Spacing around the section */
+    background-color: #141414; /* Background color */
+    color: #ddd; /* Text color */
+    text-align: center; /* Center the title */
+}
+
+.reviews-title {
+    font-size: 2.5rem; /* Title size */
+    color: gold; /* Color for the title */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+.video-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the videos */
+    gap: 20px; /* Space between videos */
+}
+
+.video-item {
+    flex: 1; /* Allow videos to grow equally */
+    max-width: 500px; /* Set a max width for videos */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure video fits within rounded corners */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+}
+
+.video-item video {
+    width: 100%; /* Adjust width to fit the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .video-container {
+        flex-direction: column; /* Stack videos on smaller screens */
+        align-items: center; /* Center videos */
+    }
+    
+    .video-item {
+        max-width: 100%; /* Allow full width on smaller screens */
+    }
+}
+/*faq sections */
+#faq-section {
+    padding: 40px 20px; /* Spacing around the section */
+    background-color: #141414; /* Background color */
+    color: #ddd; /* Text color */
+    text-align: center; /* Center the title */
+}
+
+.faq-title {
+    font-size: 2.5rem; /* Title size */
+    color: gold; /* Color for the title */
+    margin-bottom: 30px; /* Space below the title */
+}
+
+.faq-item {
+    margin-bottom: 20px; /* Space between FAQ items */
+    text-align: left; /* Align text to the left for better readability */
+    max-width: 800px; /* Max width for FAQ items */
+    margin-left: auto; /* Center align the item */
+    margin-right: auto; /* Center align the item */
+}
+
+.faq-item h3 {
+    font-size: 1.5rem; /* Font size for questions */
+    color: gold; /* Color for question text */
+    margin-bottom: 10px; /* Space below question */
+}
+
+.faq-item p {
+    font-size: 1.1rem; /* Font size for answers */
+    color: #ddd; /* Color for answer text */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    #faq-section {
+        padding: 20px 10px; /* Reduce padding on smaller screens */
+    }
+    
+    .faq-title {
+        font-size: 2rem; /* Smaller title size on mobile */
+    }
+
+    .faq-item h3 {
+        font-size: 1.2rem; /* Smaller question size on mobile */
+    }
+
+    .faq-item p {
+        font-size: 1rem; /* Smaller answer size on mobile */
+    }
+}
+
+
 
 footer {
-    background-color: #030303;
+    background-color: #000000;
     padding: 30px 0;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
