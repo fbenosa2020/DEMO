@@ -1,4 +1,4 @@
-/* Global Shyles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -24,16 +24,19 @@ header {
     align-items: center;
 }
 
+/* Logo */
 .logo img {
-    width: 300px;
-    float: left; /* Ensure logo stays on the left */
+    width: 180px; /* Smaller for mobile by default */
+    float: left;
 }
 
+/* Navigation Menu */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
-     /* Align items to the right */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
 nav ul li {
@@ -41,51 +44,42 @@ nav ul li {
 }
 
 nav ul li a {
-    color: gold;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #34495e;
     text-decoration: none;
     font-size: 1.1em;
-    transition: color 0.3s ease;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
-    font-style: normal;
+    transition: color 0.3s ease;
+    position: relative;
 }
 
-nav ul li a {
-    display: inline-block;              /* Makes the link an inline block for better styling */
-    padding: 10px 20px;                /* Adds padding for spacing */
-    color: #34495e;                     /* Default text color */
-    text-decoration: none;               /* Removes the underline */
-    position: relative;                 /* Allows positioning of pseudo-elements */
-    transition: color 0.3s ease;       /* Smooth transition for color */
-}
-
-/* Hover Effect */
 nav ul li a:hover {
-    color: #000000;                     /* Change text color on hover */
-    background-color: gold;         /* Add background color on hover */
-    border-radius: 5px;                /* Rounded corners */
-    transform: scale(1.05);             /* Slightly enlarge the link */
+    color: #000000;
+    background-color: gold;
+    border-radius: 5px;
+    transform: scale(1.05);
 }
 
-/* Adding a pseudo-element for an underline effect */
+/* Underline hover effect */
 nav ul li a:after {
-    content: "";                        /* Creates a pseudo-element */
-    position: absolute;                 /* Position it absolutely */
-    left: 50%;                         /* Center it horizontally */
-    bottom: 0;                         /* Position it at the bottom of the link */
-    width: 0;                          /* Initial width is 0 */
-    height: 2px;                       /* Height of the underline */
-    background: #000000;               /* Color of the underline */
-    transition: width 0.3s ease, left 0.3s ease; /* Transition for width and position */
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: width 0.3s ease, left 0.3s ease;
 }
 
-/* Hover effect for the underline */
 nav ul li a:hover:after {
-    width: 100%;                       /* Full width on hover */
-    left: 0;                           /* Align to the left */
+    width: 100%;
+    left: 0;
 }
 
-
+/* Burger Menu for Mobile */
 .burger {
     display: none;
     cursor: pointer;
@@ -94,10 +88,82 @@ nav ul li a:hover:after {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: #000000;
     margin: 5px;
     transition: all 0.3s ease;
 }
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    .logo img {
+        width: 150px; /* Adjust logo size for smaller screens */
+    }
+
+    nav ul {
+        display: none; /* Hide the menu on smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        background-color: #ffffff;
+        position: absolute;
+        top: 60px; /* Position below the header */
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0; /* Remove the side margins */
+        padding: 15px 0; /* Add vertical padding for spacing */
+    }
+
+    nav ul li a {
+        width: 100%; /* Make links full width */
+        padding: 15px 0;
+        color: #34495e;
+    }
+
+    nav ul li a:hover {
+        background-color: gold;
+        color: #000000;
+    }
+
+    .burger {
+        display: block; /* Show burger icon */
+    }
+
+    .burger.active div:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.active div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.active div:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    nav ul.active {
+        display: flex; /* Show menu when burger is clicked */
+    }
+}
+
+/* For small devices like phones */
+@media (max-width: 576px) {
+    .logo img {
+        width: 130px; /* Further reduction for phones */
+    }
+
+    nav ul {
+        top: 50px;
+    }
+
+    nav ul li a {
+        padding: 12px 0;
+    }
+}
+
 /* Hero Section */
 #hero {
     height: 100vh; /* Full screen height */
@@ -121,10 +187,10 @@ nav ul li a:hover:after {
 .hero-video {
     flex: 1;
     margin-right: 20px; /* Add some spacing between the video and text */
-    border: 10px solid #ffffff4d; /* Solid border for the frame */
+
     border-radius: 10px; /* Rounded corners for the border */
     padding: 5px; /* Padding between the border and the video */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Optional: add shadow for depth */
+  
 }
 
 .hero-video video {
@@ -336,12 +402,11 @@ nav ul li a:hover:after {
 /* services*/
 
 /* General Styles */
-
-/* Style for the Services and Form Section */
 /* Style for the Services and Form Section */
 #services-form {
-    display: flex; /* Use flexbox for side-by-side layout */
+    display: flex; /* Flexbox for side-by-side layout */
     justify-content: space-between; /* Space out the items */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
     padding: 60px 20px; /* Spacing around the section */
     background-color: #000000; /* Background color */
     border-radius: 8px; /* Rounded corners */
@@ -351,6 +416,7 @@ nav ul li a:hover:after {
 .services-form-container {
     display: flex; /* Flexbox for inner container */
     flex: 1; /* Allow both children to take equal space */
+    flex-wrap: wrap; /* Enable wrapping */
 }
 
 /* Services Section Styles */
@@ -391,8 +457,7 @@ nav ul li a:hover:after {
     transform: translateY(-5px) rotate(1deg); /* Slight lift and rotation effect */
 }
 
-
-
+/* Services List */
 .services ul {
     list-style-type: none; /* Remove default list style */
     padding: 0; /* Remove padding */
@@ -432,6 +497,45 @@ nav ul li a:hover:after {
     left: 0; /* Align to the left */
     font-size: 1.2rem; /* Size of the checkmark */
 }
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices */
+@media (max-width: 1024px) {
+    #services-form {
+        flex-direction: column; /* Stack services and form vertically */
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .services {
+        margin-right: 0; /* Remove margin between sections on smaller screens */
+        margin-bottom: 20px; /* Add space below services section */
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for medium screens */
+    }
+}
+
+/* For phones and small devices */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* Switch to single-column layout for small screens */
+    }
+
+    .services h2 {
+        font-size: 2rem; /* Reduce heading size */
+    }
+
+    .service-item {
+        padding: 10px; /* Adjust padding */
+    }
+
+    #services-form {
+        padding: 30px 10px; /* Reduce padding for mobile */
+    }
+}
+
 
 /* Form Section Styles */
 .form {
@@ -559,9 +663,54 @@ button.btn:hover {
     color: rgb(0, 0, 0); /* Change color on hover */
 }
 
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller devices */
+@media (max-width: 1024px) {
+    .ceo-container {
+        flex-direction: column; /* Stack the image and text vertically */
+        text-align: center; /* Ensure text remains centered */
+    }
+
+    .ceo-photo {
+        width: 120px; /* Smaller image size */
+        height: 120px; /* Smaller height */
+    }
+
+    .ceo-description {
+        margin-top: 20px; /* Less margin on smaller screens */
+        max-width: 90%; /* Limit text width */
+    }
+
+    .social-media a {
+        font-size: 1.3rem; /* Smaller icon size */
+    }
+}
+
+/* For phones and small devices */
+@media (max-width: 768px) {
+    .ceo-photo {
+        width: 100px; /* Further reduce image size */
+        height: 100px;
+    }
+
+    .ceo-description {
+        margin-top: 15px; /* Reduce margin further */
+        font-size: 1rem; /* Slightly reduce font size */
+    }
+
+    .social-media a {
+        font-size: 1.2rem; /* Reduce icon size further */
+    }
+
+    #ceo-section {
+        padding: 40px 10px; /* Reduce section padding for small devices */
+    }
+}
+
+
 /*booking section */
-/* Booking Section */
-#booking-section {
+/* Booking Section */#booking-section {
     padding: 40px 20px; /* Spacing around the section */
     background-color: #141414; /* Background color */
     color: #ddd; /* Text color */
@@ -570,6 +719,7 @@ button.btn:hover {
     display: flex; /* Use flexbox */
     justify-content: space-between; /* Space between left and right content */
     align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .booking-info {
@@ -580,6 +730,7 @@ button.btn:hover {
     text-align: right; /* Align button and text to the right */
 }
 
+/* Heading Styles */
 #booking-section h2 {
     font-size: 2rem; /* Heading size */
     color: gold; /* Gold color for the heading */
@@ -590,15 +741,16 @@ button.btn:hover {
     margin-left: 100px;
 }
 
+/* Paragraph Styles */
 #booking-section p {
     font-size: 1.1rem; /* Slightly larger text */
     margin-bottom: 20px; /* Space below text */
     margin-right: 100px;
     margin-top: 5px;
     margin-left: 200px;
-    
 }
 
+/* Button Styles */
 #booking-section .btn1 {
     background-color: gold; /* Button background color */
     color: #141414; /* Button text color */
@@ -607,88 +759,149 @@ button.btn:hover {
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Pointer cursor on hover */
     font-size: 1rem; /* Normal font size */
-    transition: none; /* Remove transition effect */
     margin-right: 100px;
 }
 
-#booking-section .btn:hover {
-    background-color: #000000; /* Darker button on hover */
-    color: white; /* Change text color on hover */
-    /* Removed any transition effects */
+#booking-section .btn1:hover {
+    background-color: #ffffff; /* Darker button on hover */
+    color: rgb(0, 0, 0); /* Change text color on hover */
 }
+
+/* Icon Styles in Heading */
 #booking-section h2 i {
     margin-right: 0px; /* Space between the icon and text */
     color: gold; /* Color of the icon */
     font-size: 2.5rem; /* Size of the icon */
 }
 
+/* Media Queries for Responsiveness */
 
+/* For tablets and smaller devices */
+@media (max-width: 1024px) {
+    #booking-section {
+        flex-direction: column; /* Stack the content vertically */
+        text-align: center; /* Center-align text */
+    }
 
+    #booking-section h2 {
+        margin-left: 0; /* Remove left margin */
+    }
 
-/* Features Section */
-#features {
-    padding: 60px 0;
-    background-color: #ffffff;
-    text-align: center;
-}
+    #booking-section p {
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+    }
 
-#features h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #000000;
-}
-
-.features-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    
-}
-
-.feature-box {
-    background: gold; /* Background color */
-    padding: 20px; /* Inner spacing */
-    margin: 10px; /* Spacing around boxes */
-    width: 30%; /* Width of each box */
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Initial shadow */
-    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for effects */
-    border-radius: 10px; /* Rounded corners */
-    text-align: center; /* Centered text */
-    margin-bottom: 20px;
-}
-
-.feature-box:hover {
-    background-color: rgb(255, 217, 0); /* Slightly darker gold on hover */
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0); /* Deeper shadow on hover */
-    transform: translateY(-5px); /* Lift effect on hover */
-}
-
-.feature-box i {
-    font-size: 3em; /* Icon size */
-    margin-bottom: 15px; /* Space below icon */
-    color: rgb(0, 0, 0); /* Icon color */
-}
-
-.feature-box h3 {
-    font-size: 1.5em; /* Heading size */
-    margin-bottom: 10px; /* Space below heading */
-    color: #020202; /* Heading color */
-}
-
-.feature-box p {
-    color: rgb(0, 0, 0); /* Paragraph color */
-}
-
-
-.feature-box:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 768px) {
-    .feature-box {
-        width: 100%; /* Make the boxes stack vertically on smaller screens */
+    #booking-section .btn1 {
+        margin-right: 0; /* Remove right margin */
+        margin-top: 20px; /* Add spacing above button */
     }
 }
+
+/* For phones and small devices */
+@media (max-width: 768px) {
+    #booking-section {
+        padding: 30px 10px; /* Reduce padding */
+    }
+
+    #booking-section h2 {
+        font-size: 1.8rem; /* Reduce heading size */
+        margin-bottom: 10px; /* Adjust margin */
+    }
+
+    #booking-section p {
+        font-size: 1rem; /* Reduce paragraph font size */
+        margin-left: 0; /* Remove margin */
+        margin-right: 0; /* Remove margin */
+    }
+
+    #booking-section .btn1 {
+        padding: 10px 15px; /* Reduce button padding */
+        font-size: 0.9rem; /* Slightly smaller font size */
+    }
+}
+
+
+
+/* Features Section Styling */
+.offer-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.offer-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #F6C90E;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.offer-description {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.offer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.offer-item {
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-item i {
+    font-size: 40px;
+    color: #495E57;
+    margin-bottom: 15px;
+}
+
+.offer-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.offer-item p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
+}
+
+.offer-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #495E57;
+}
+
+.offer-item:hover h3, .offer-item:hover p {
+    color:#F6C90E;
+}
+
+@media (max-width: 992px) {
+    .offer-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .offer-container {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
 
 /*contact section*/
 #contact-section {
@@ -696,6 +909,9 @@ button.btn:hover {
     background-color: #141414; /* Background color */
     color: rgb(255, 255, 255); /* Text color */
     text-align: center; /* Center the text */
+}
+#contact-section h2{
+    color: gold;
 }
 .contactp{
     color: #000000;
@@ -706,6 +922,11 @@ button.btn:hover {
     grid-template-columns: repeat(3, 1fr); /* Three equal columns */
     gap: 20px; /* Space between grid items */
     margin-top: 20px; /* Space above grid */
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Contact Item Styles */
@@ -1019,6 +1240,43 @@ button.btn:hover {
     text-align: center; /* Center the title */
 }
 
+.directions-container {
+    padding: 10px;
+ 
+    border-radius: 5px;  /* Rounded corners */
+    margin: 10px 0;
+}
+
+.directions-link {
+    text-decoration: none;  /* Remove underline */
+    color: #007bff;  /* Make the link blue (can be adjusted) */
+    font-weight: bold;  /* Bold text for the link */
+    font-size: 16px;  /* Font size */
+}
+
+.directions-link:hover {
+    color: #ffcc00;  /* Change color on hover */
+    text-decoration: underline;  /* Add underline on hover (optional) */
+}
+
+.email-container1 {
+    /* You can style the div as desired */
+    margin: 10px 0;
+}
+
+.email-link {
+    text-decoration: none;  /* Remove underline */
+    color: #ffcc00;  /* Change color (you can adjust this) */
+    font-weight: bold;  /* Make the text bold */
+    font-size: 16px;  /* Set font size */
+}
+
+.email-link:hover {
+    color: #ffcc00;  /* Change color on hover (optional) */
+    text-decoration: underline;  /* Underline on hover (optional) */
+}
+
+
 .faq-title {
     font-size: 2.5rem; /* Title size */
     color: gold; /* Color for the title */
@@ -1066,9 +1324,9 @@ button.btn:hover {
 
 
 footer {
-    background-color: #000000;
+    background-color: #ffffff;
     padding: 30px 0;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
