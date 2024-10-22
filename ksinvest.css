@@ -170,7 +170,7 @@ nav ul li a:hover:after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
                 url('STAGE.jpg') no-repeat center center/cover; /* Background image */
     color: white;
     position: relative;
@@ -182,69 +182,43 @@ nav ul li a:hover:after {
     align-items: center;
     justify-content: space-between;
     width: 90%;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .hero-video {
     flex: 1;
-    margin-right: 20px; /* Add some spacing between the video and text */
-
-    border-radius: 10px; /* Rounded corners for the border */
-    padding: 5px; /* Padding between the border and the video */
-  
+    margin-right: 20px; /* Spacing between video and text */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px;
 }
 
 .hero-video video {
-    height: 500px;   /* Set a specific height */
-    width: 100%;     /* Adjust width to fit the container */
-    object-fit: cover; /* Ensure video doesn't stretch */
-    border-radius: 10px; /* Keep the same rounding for the video */
+    height: 500px; /* Specific height for larger screens */
+    width: 100%; /* Full width */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the video */
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .hero-video video {
-        height: auto; /* Allow height to adjust on smaller screens */
-        max-height: 400px; /* Limit maximum height */
-    }
-}
 .hero-logo {
-    width: 450px; /* Increase the size for better visibility */
+    width: 450px; /* Set width for larger screens */
     height: auto;
     margin-bottom: 20px;
     display: block;
     margin-left: auto;
     margin-right: 100px;
-
-    /* Add a shadow/glow effect */
-    box-shadow: 0 4px 25px rgba(255, 215, 0, 0.7); /* Soft gold glow for enhancement */
-    
-    /* Add a gradient border */
-    border: 3px solid; /* Solid border to allow gradient */
-    border-image: linear-gradient(to right, gold, rgba(255, 255, 255, 0.5)) 1; /* Gradient border effect */
-    border-radius: 10px; /* Rounded corners for a polished look */
-
-    /* Optional: Add a background */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for contrast */
-    padding: 10px; /* Padding inside the background */
-
-    /* Hover effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+    box-shadow: 0 4px 25px rgba(255, 215, 0, 0.7); /* Glow effect */
+    border: 3px solid; /* Solid border for gradient effect */
+    border-image: linear-gradient(to right, gold, rgba(255, 255, 255, 0.5)) 1;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-logo:hover {
-    transform: scale(1.05); /* Slightly increase size on hover */
-    box-shadow: 0 6px 30px rgba(255, 215, 0, 0.9); /* Brighter glow on hover */
+    transform: scale(1.1); /* Enlarge on hover */
+    box-shadow: 0 6px 30px rgba(255, 215, 0, 0.9); /* Brighter glow */
 }
-
-
-.hero-logo:hover {
-    /* Add an animation effect when the logo is hovered over */
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    transition: transform 0.3s ease; /* Smooth transition */
-}
-
-
-
 
 .hero-text {
     flex: 1;
@@ -291,7 +265,7 @@ nav ul li a:hover:after {
     color: white;
 }
 
-/* Animations */
+/* Animation */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -302,10 +276,51 @@ nav ul li a:hover:after {
         transform: translateY(0);
     }
 }
+
+/* Responsive Styling for tablets and mobile devices */
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center items */
+    }
+
+    .hero-video {
+        margin-bottom: 20px; /* Add margin below video */
+    }
+
+    .hero-logo {
+        margin-right: 0; /* Remove right margin */
+        margin-left: 0; /* Remove left margin */
+        width: 350px; /* Reduce logo size */
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem; /* Reduce heading size */
+    }
+}
+
 @media (max-width: 768px) {
     .hero-video video {
         height: 250px; /* Smaller height for mobile screens */
         width: auto;
+    }
+
+    .hero-logo {
+        width: 300px; /* Further reduce logo size for small screens */
+        margin-bottom: 20px; /* Add space below logo */
+    }
+
+    .hero-text h2 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+
+    .hero-text p {
+        font-size: 1.2rem; /* Adjust paragraph size for mobile */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Reduce button padding */
+        font-size: 1rem; /* Reduce button text size */
     }
 }
 
@@ -995,6 +1010,7 @@ a {
     padding: 40px 20px; /* Spacing around the section */
     background-color: #ffffff; /* Background color */
     color: #000000; /* Text color */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .ceo-content1 {
@@ -1003,6 +1019,7 @@ a {
     align-items: center; /* Center items vertically */
     max-width: 1200px; /* Max width for content */
     margin: 0 auto; /* Center content */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .ceo-image {
@@ -1011,10 +1028,12 @@ a {
     border-radius: 50%; /* Circular image */
     margin-right: 30px; /* Space between image and text */
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+    object-fit: cover; /* Ensure image fits nicely */
 }
 
 .ceo-details1 {
     flex: 1; /* Allow details section to take remaining space */
+    margin-top: 20px; /* Add margin for spacing on smaller screens */
 }
 
 #ceo-about {
@@ -1037,7 +1056,7 @@ a {
     padding-left: 25px; /* Space for the checkmark */
     margin: 10px 0; /* Space above and below */
     font-size: 1.5rem; /* Subheading size */
-    color: #000000; /* White color for subheadings */
+    color: #000000; /* Black color for text */
 }
 
 #ceo-about .ceo-list li::before {
@@ -1048,21 +1067,57 @@ a {
     font-size: 1.5rem; /* Size of the checkmark */
 }
 
-/* Responsive styling */
-@media (max-width: 768px) {
+/* Responsive styling for smaller screens */
+@media (max-width: 1024px) {
     #ceo-section1 {
-        flex-direction: column; /* Stack on smaller screens */
-        text-align: center; /* Center text on small screens */
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text */
+        padding: 30px 10px; /* Adjust padding */
     }
-    
+
+    .ceo-content1 {
+        flex-direction: column; /* Stack image and text */
+        align-items: center; /* Center items */
+        text-align: center; /* Center-align text */
+    }
+
     .ceo-image {
-        margin: 0 auto; /* Center image */
+        margin-bottom: 20px; /* Space between image and text */
     }
     
-    .ceo-details1 {
-        margin-top: 20px; /* Space above details */
+    #ceo-about h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    #ceo-about .ceo-list li {
+        font-size: 1.2rem; /* Adjust list item size */
     }
 }
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    #ceo-section1 {
+        padding: 20px 10px; /* Reduce padding */
+    }
+
+    .ceo-content1 {
+        width: 100%; /* Ensure full width on mobile */
+    }
+
+    .ceo-image {
+        width: 150px; /* Reduce image size on mobile */
+        margin-bottom: 20px; /* Add margin below image */
+    }
+
+    #ceo-about h2 {
+        font-size: 1.8rem; /* Reduce heading size */
+    }
+
+    #ceo-about .ceo-list li {
+        font-size: 1.1rem; /* Reduce font size */
+    }
+}
+
 
 /*ticket section*/
 #tickets-section {
