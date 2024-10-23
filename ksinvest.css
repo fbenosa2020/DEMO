@@ -1,1392 +1,1393 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header Styles */
-header {
-    background-color: #ffffff;
-    padding: 15px 0;
-    display: flex;
-    justify-content: space-between; /* Align logo to the left and nav to the right */
-    align-items: center;
-}
-
-/* Logo */
-.logo img {
-    width: 180px; /* Smaller for mobile by default */
-    float: left;
-}
-
-/* Navigation Menu */
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
-}
-
-nav ul li {
-    margin-left: 25px;
-}
-
-nav ul li a {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #34495e;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    transition: color 0.3s ease;
-    position: relative;
-}
-
-nav ul li a:hover {
-    color: #000000;
-    background-color: gold;
-    border-radius: 5px;
-    transform: scale(1.05);
-}
-
-/* Underline hover effect */
-nav ul li a:after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: #000000;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav ul li a:hover:after {
-    width: 100%;
-    left: 0;
-}
-
-/* Burger Menu for Mobile */
-.burger {
-    display: none;
-    cursor: pointer;
-}
-
-.burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #000000;
-    margin: 5px;
-    transition: all 0.3s ease;
-}
-
-/* Media Queries for Responsiveness */
-
-/* For tablets and smaller devices */
-@media (max-width: 768px) {
-    .logo img {
-        width: 150px; /* Adjust logo size for smaller screens */
+    /* Global Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    nav ul {
-        display: none; /* Hide the menu on smaller screens */
-        flex-direction: column; /* Stack items vertically */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Header Styles */
+    header {
         background-color: #ffffff;
-        position: absolute;
-        top: 60px; /* Position below the header */
-        right: 0;
-        width: 100%;
-        text-align: center;
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between; /* Align logo to the left and nav to the right */
+        align-items: center;
+    }
+
+    /* Logo */
+    .logo img {
+        width: 180px; /* Smaller for mobile by default */
+        float: left;
+    }
+
+    /* Navigation Menu */
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap; /* Allows wrapping for smaller screens */
     }
 
     nav ul li {
-        margin: 0; /* Remove the side margins */
-        padding: 15px 0; /* Add vertical padding for spacing */
+        margin-left: 25px;
     }
 
     nav ul li a {
-        width: 100%; /* Make links full width */
-        padding: 15px 0;
+        display: inline-block;
+        padding: 10px 20px;
         color: #34495e;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        transition: color 0.3s ease;
+        position: relative;
     }
 
     nav ul li a:hover {
-        background-color: gold;
         color: #000000;
+        background-color: gold;
+        border-radius: 5px;
+        transform: scale(1.05);
     }
 
+    /* Underline hover effect */
+    nav ul li a:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: #000000;
+        transition: width 0.3s ease, left 0.3s ease;
+    }
+
+    nav ul li a:hover:after {
+        width: 100%;
+        left: 0;
+    }
+
+    /* Burger Menu for Mobile */
     .burger {
-        display: block; /* Show burger icon */
+        display: none;
+        cursor: pointer;
     }
 
-    .burger.active div:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #000000;
+        margin: 5px;
+        transition: all 0.3s ease;
     }
 
-    .burger.active div:nth-child(2) {
-        opacity: 0;
+    /* Media Queries for Responsiveness */
+
+    /* For tablets and smaller devices */
+    @media (max-width: 768px) {
+        .logo img {
+            width: 150px; /* Adjust logo size for smaller screens */
+        }
+
+        nav ul {
+            display: none; /* Hide the menu on smaller screens */
+            flex-direction: column; /* Stack items vertically */
+            background-color: #ffffff;
+            position: absolute;
+            top: 60px; /* Position below the header */
+            right: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        nav ul li {
+            margin: 0; /* Remove the side margins */
+            padding: 15px 0; /* Add vertical padding for spacing */
+        }
+
+        nav ul li a {
+            width: 100%; /* Make links full width */
+            padding: 15px 0;
+            color: #34495e;
+        }
+
+        nav ul li a:hover {
+            background-color: gold;
+            color: #000000;
+        }
+
+        .burger {
+            display: block; /* Show burger icon */
+        }
+
+        .burger.active div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .burger.active div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger.active div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        nav ul.active {
+            display: flex; /* Show menu when burger is clicked */
+        }
     }
 
-    .burger.active div:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
+    /* For small devices like phones */
+    @media (max-width: 576px) {
+        .logo img {
+            width: 130px; /* Further reduction for phones */
+        }
+
+        nav ul {
+            top: 50px;
+        }
+
+        nav ul li a {
+            padding: 12px 0;
+        }
     }
 
-    nav ul.active {
-        display: flex; /* Show menu when burger is clicked */
-    }
-}
-
-/* For small devices like phones */
-@media (max-width: 576px) {
-    .logo img {
-        width: 130px; /* Further reduction for phones */
-    }
-
-    nav ul {
-        top: 50px;
+    /* Hero Section */
+    #hero {
+        height: 100vh; /* Full screen height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('STAGE.jpg') no-repeat center center/cover; /* Background image */
+        color: white;
+        position: relative;
+        overflow: hidden;
     }
 
-    nav ul li a {
-        padding: 12px 0;
-    }
-}
-
-/* Hero Section */
-#hero {
-    height: 100vh; /* Full screen height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('STAGE.jpg') no-repeat center center/cover; /* Background image */
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-.hero-video {
-    flex: 1;
-    margin-right: 20px; /* Spacing between video and text */
-    border-radius: 10px; /* Rounded corners */
-    padding: 5px;
-}
-
-.hero-video video {
-    height: 500px; /* Specific height for larger screens */
-    width: 100%; /* Full width */
-    object-fit: cover; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners for the video */
-}
-
-.hero-logo {
-    width: 450px; /* Set width for larger screens */
-    height: auto;
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: 100px;
-    box-shadow: 0 4px 25px rgba(255, 215, 0, 0.7); /* Glow effect */
-    border: 3px solid; /* Solid border for gradient effect */
-    border-image: linear-gradient(to right, gold, rgba(255, 255, 255, 0.5)) 1;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    padding: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero-logo:hover {
-    transform: scale(1.1); /* Enlarge on hover */
-    box-shadow: 0 6px 30px rgba(255, 215, 0, 0.9); /* Brighter glow */
-}
-
-.hero-text {
-    flex: 1;
-    text-align: left; /* Align text to the left */
-}
-
-.hero-text h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    opacity: 0;
-    transform: translateY(-50px);
-    animation: fadeInUp 1s forwards;
-    color: gold;
-}
-
-.hero-text p {
-    font-size: 1.5rem;
-    margin: 20px 0;
-    opacity: 0;
-    animation: fadeInUp 1.5s forwards;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: rgba(0, 0, 0, 0.918);
-    background-color: gold;
-    border: none;
-    border-radius: 50px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    opacity: 0;
-    animation: fadeInUp 2s forwards;
-    text-decoration: none;
-    font-family: Poppins;
-    font-weight: 700;
-}
-
-.btn:hover {
-    background-color: #000000;
-    transform: scale(1.05);
-    color: white;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive Styling for tablets and mobile devices */
-@media (max-width: 1024px) {
     .hero-content {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center items */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
     }
 
     .hero-video {
-        margin-bottom: 20px; /* Add margin below video */
+        flex: 1;
+        margin-right: 20px; /* Spacing between video and text */
+        border-radius: 10px; /* Rounded corners */
+        padding: 5px;
     }
 
-    .hero-logo {
-        margin-right: 0; /* Remove right margin */
-        margin-left: 0; /* Remove left margin */
-        width: 350px; /* Reduce logo size */
-    }
-
-    .hero-text h2 {
-        font-size: 2.5rem; /* Reduce heading size */
-    }
-}
-
-@media (max-width: 768px) {
     .hero-video video {
-        height: 250px; /* Smaller height for mobile screens */
-        width: auto;
+        height: 500px; /* Specific height for larger screens */
+        width: 100%; /* Full width */
+        object-fit: cover; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners for the video */
     }
 
     .hero-logo {
-        width: 300px; /* Further reduce logo size for small screens */
-        margin-bottom: 20px; /* Add space below logo */
+        width: 450px; /* Set width for larger screens */
+        height: auto;
+        margin-bottom: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: 100px;
+        box-shadow: 0 4px 25px rgba(255, 215, 0, 0.7); /* Glow effect */
+        border: 3px solid; /* Solid border for gradient effect */
+        border-image: linear-gradient(to right, gold, rgba(255, 255, 255, 0.5)) 1;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        padding: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-logo:hover {
+        transform: scale(1.1); /* Enlarge on hover */
+        box-shadow: 0 6px 30px rgba(255, 215, 0, 0.9); /* Brighter glow */
+    }
+
+    .hero-text {
+        flex: 1;
+        text-align: left; /* Align text to the left */
     }
 
     .hero-text h2 {
-        font-size: 2rem; /* Adjust heading size for mobile */
+        font-size: 3rem;
+        font-weight: bold;
+        opacity: 0;
+        transform: translateY(-50px);
+        animation: fadeInUp 1s forwards;
+        color: gold;
     }
 
     .hero-text p {
-        font-size: 1.2rem; /* Adjust paragraph size for mobile */
+        font-size: 1.5rem;
+        margin: 20px 0;
+        opacity: 0;
+        animation: fadeInUp 1.5s forwards;
     }
 
     .btn {
-        padding: 10px 20px; /* Reduce button padding */
-        font-size: 1rem; /* Reduce button text size */
-    }
-}
-
-
-
-
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background-color: #34495e;
-        width: 50%;
-        height: 100vh;
-        align-items: center;
-        justify-content: space-around;
-        display: none;
-    }
-
-    nav ul.nav-active {
-        display: flex;
-    }
-
-    .burger {
-        display: block;
-    }
-
-    .burger.toggle .line1 {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .burger.toggle .line2 {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        color: rgba(0, 0, 0, 0.918);
+        background-color: gold;
+        border: none;
+        border-radius: 50px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
         opacity: 0;
+        animation: fadeInUp 2s forwards;
+        text-decoration: none;
+        font-family: Poppins;
+        font-weight: 700;
     }
 
-    .burger.toggle .line3 {
-        transform: rotate(45deg) translate(-5px, -6px);
+    .btn:hover {
+        background-color: #000000;
+        transform: scale(1.05);
+        color: white;
     }
-}
+
+    /* Animation */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Responsive Styling for tablets and mobile devices */
+    @media (max-width: 1024px) {
+        .hero-content {
+            flex-direction: column; /* Stack content vertically */
+            align-items: center; /* Center items */
+        }
+
+        .hero-video {
+            margin-bottom: 20px; /* Add margin below video */
+        }
+
+        .hero-logo {
+            margin-right: 0; /* Remove right margin */
+            margin-left: 0; /* Remove left margin */
+            width: 350px; /* Reduce logo size */
+        }
+
+        .hero-text h2 {
+            font-size: 2.5rem; /* Reduce heading size */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero-video video {
+            height: 250px; /* Smaller height for mobile screens */
+            width: auto;
+        }
+
+        .hero-logo {
+            width: 300px; /* Further reduce logo size for small screens */
+            margin-bottom: 20px; /* Add space below logo */
+        }
+
+        .hero-text h2 {
+            font-size: 2rem; /* Adjust heading size for mobile */
+        }
+
+        .hero-text p {
+            font-size: 1.2rem; /* Adjust paragraph size for mobile */
+        }
+
+        .btn {
+            padding: 10px 20px; /* Reduce button padding */
+            font-size: 1rem; /* Reduce button text size */
+        }
+    }
 
 
-/*section1*/
-/* Style for the About Section */
-#about {
-    background-color: #f9f9f9; /* Light background for contrast */
-    padding: 60px 20px; /* Spacing around the section */
-    text-align: center; /* Center align text */
-}
 
-#about h2 {
-    font-size: 2.5rem; /* Larger heading */
-    margin-bottom: 20px; /* Space below the heading */
-    color: #333; /* Darker text color */
-}
 
-#about p {
-    font-size: 1.1rem; /* Slightly larger text for readability */
-    line-height: 1.6; /* Spacing between lines for readability */
-    margin-bottom: 20px; /* Space below each paragraph */
-    color: #555; /* Softer text color */
-    max-width: 800px; /* Restrict paragraph width for readability */
-    margin: 0 auto 20px auto; /* Center paragraph */
-}
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background-color: #34495e;
+            width: 50%;
+            height: 100vh;
+            align-items: center;
+            justify-content: space-around;
+            display: none;
+        }
 
-#about .btn {
-    display: inline-block; /* Make the button an inline element */
-    padding: 12px 25px; /* Padding inside the button */
-    background-color: gold; /* Blue background for the button */
-    color: #000000; /* White text */
-    font-size: 1rem; /* Normal button text size */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s ease; /* Smooth transition on hover */
-}
+        nav ul.nav-active {
+            display: flex;
+        }
 
-#about .btn:hover {
-    background-color: #0a0a0a;
-    color: white; /* Darker blue on hover */
-}
+        .burger {
+            display: block;
+        }
 
-/* Responsive styling for smaller screens */
-@media (max-width: 768px) {
+        .burger.toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .burger.toggle .line2 {
+            opacity: 0;
+        }
+
+        .burger.toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    }
+
+
+    /*section1*/
+    /* Style for the About Section */
+    #about {
+        background-color: #f9f9f9; /* Light background for contrast */
+        padding: 60px 20px; /* Spacing around the section */
+        text-align: center; /* Center align text */
+    }
+
     #about h2 {
-        font-size: 2rem; /* Smaller heading on mobile */
+        font-size: 2.5rem; /* Larger heading */
+        margin-bottom: 20px; /* Space below the heading */
+        color: #333; /* Darker text color */
     }
+
     #about p {
-        font-size: 1rem; /* Adjust paragraph font size on mobile */
+        font-size: 1.1rem; /* Slightly larger text for readability */
+        line-height: 1.6; /* Spacing between lines for readability */
+        margin-bottom: 20px; /* Space below each paragraph */
+        color: #555; /* Softer text color */
+        max-width: 800px; /* Restrict paragraph width for readability */
+        margin: 0 auto 20px auto; /* Center paragraph */
     }
-}
+
+    #about .btn {
+        display: inline-block; /* Make the button an inline element */
+        padding: 12px 25px; /* Padding inside the button */
+        background-color: gold; /* Blue background for the button */
+        color: #000000; /* White text */
+        font-size: 1rem; /* Normal button text size */
+        border-radius: 5px; /* Rounded corners */
+        text-decoration: none; /* Remove underline */
+        transition: background-color 0.3s ease; /* Smooth transition on hover */
+    }
+
+    #about .btn:hover {
+        background-color: #0a0a0a;
+        color: white; /* Darker blue on hover */
+    }
+
+    /* Responsive styling for smaller screens */
+    @media (max-width: 768px) {
+        #about h2 {
+            font-size: 2rem; /* Smaller heading on mobile */
+        }
+        #about p {
+            font-size: 1rem; /* Adjust paragraph font size on mobile */
+        }
+    }
 
 
-/* services*/
+    /* services*/
 
-/* General Styles */
-/* Style for the Services and Form Section */
-#services-form {
-    display: flex; /* Flexbox for side-by-side layout */
-    justify-content: space-between; /* Space out the items */
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
-    padding: 60px 20px; /* Spacing around the section */
-    background-color: #000000; /* Background color */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
-}
-
-.services-form-container {
-    display: flex; /* Flexbox for inner container */
-    flex: 1; /* Allow both children to take equal space */
-    flex-wrap: wrap; /* Enable wrapping */
-}
-
-/* Services Section Styles */
-.services {
-    flex: 1; /* Take equal space */
-    margin-right: 20px; /* Space between services and form */
-    color: #ddd; /* Text color */
-}
-
-.services h2 {
-    font-size: 2.5rem; /* Heading size */
-    margin-bottom: 20px; /* Space below heading */
-    color: rgb(250, 249, 244); /* Accent color for headings */
-    border-bottom: 2px solid gold; /* Underline for professionalism */
-    padding-bottom: 10px; /* Padding below heading */
-    text-align: center;
-}
-
-.services-grid {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 20px; /* Space between items */
-    margin-top: 20px; /* Space above grid */
-}
-
-.service-item {
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for items */
-    border-radius: 8px; /* Rounded corners */
-    padding: 15px; /* Padding inside items */
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.952); /* Shadow for items */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    cursor: pointer; /* Change cursor to pointer */
-}
-
-.service-item:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Darker background on hover */
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Deeper shadow on hover */
-    transform: translateY(-5px) rotate(1deg); /* Slight lift and rotation effect */
-}
-
-/* Services List */
-.services ul {
-    list-style-type: none; /* Remove default list style */
-    padding: 0; /* Remove padding */
-}
-
-.services ul li {
-    margin-bottom: 15px; /* Space between list items */
-    font-size: 1.1rem; /* Slightly larger text for clarity */
-}
-
-/* Highlighted Headers for Categories */
-.services h3 {
-    font-size: 1.3rem; /* Heading size for categories */
-    margin: 15px 0; /* Space above and below */
-    color: gold; /* Accent color for headings */
-    padding-bottom: 5px; /* Padding below heading */
-}
-
-/* Checkmark List Styles */
-.check-list {
-    list-style-type: none; /* Remove default list style */
-    padding-left: 0; /* Remove padding */
-}
-
-.check-list li {
-    position: relative; /* Positioning for the checkmark */
-    padding-left: 25px; /* Space for the checkmark */
-    margin-bottom: 10px; /* Space below each item */
-    font-size: 1.1rem; /* Slightly larger text for clarity */
-    color: #ddd; /* Match text color */
-}
-
-.check-list li::before {
-    content: '✔'; /* Checkmark symbol */
-    color: gold; /* Gold color for checkmark */
-    position: absolute; /* Position checkmark */
-    left: 0; /* Align to the left */
-    font-size: 1.2rem; /* Size of the checkmark */
-}
-
-/* Media Queries for Responsiveness */
-
-/* For tablets and smaller devices */
-@media (max-width: 1024px) {
+    /* General Styles */
+    /* Style for the Services and Form Section */
     #services-form {
-        flex-direction: column; /* Stack services and form vertically */
-        padding: 40px 15px; /* Adjust padding for smaller screens */
+        display: flex; /* Flexbox for side-by-side layout */
+        justify-content: space-between; /* Space out the items */
+        flex-wrap: wrap; /* Allows wrapping for smaller screens */
+        padding: 60px 20px; /* Spacing around the section */
+        background-color: #000000; /* Background color */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
     }
 
+    .services-form-container {
+        display: flex; /* Flexbox for inner container */
+        flex: 1; /* Allow both children to take equal space */
+        flex-wrap: wrap; /* Enable wrapping */
+    }
+
+    /* Services Section Styles */
     .services {
-        margin-right: 0; /* Remove margin between sections on smaller screens */
-        margin-bottom: 20px; /* Add space below services section */
-    }
-
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for medium screens */
-    }
-}
-
-/* For phones and small devices */
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr; /* Switch to single-column layout for small screens */
+        flex: 1; /* Take equal space */
+        margin-right: 20px; /* Space between services and form */
+        color: #ddd; /* Text color */
     }
 
     .services h2 {
-        font-size: 2rem; /* Reduce heading size */
+        font-size: 2.5rem; /* Heading size */
+        margin-bottom: 20px; /* Space below heading */
+        color: rgb(250, 249, 244); /* Accent color for headings */
+        border-bottom: 2px solid gold; /* Underline for professionalism */
+        padding-bottom: 10px; /* Padding below heading */
+        text-align: center;
+    }
+
+    .services-grid {
+        display: grid; /* Use grid for layout */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 20px; /* Space between items */
+        margin-top: 20px; /* Space above grid */
     }
 
     .service-item {
-        padding: 10px; /* Adjust padding */
+        background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for items */
+        border-radius: 8px; /* Rounded corners */
+        padding: 15px; /* Padding inside items */
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.952); /* Shadow for items */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+        cursor: pointer; /* Change cursor to pointer */
     }
 
-    #services-form {
-        padding: 30px 10px; /* Reduce padding for mobile */
+    .service-item:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Darker background on hover */
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5); /* Deeper shadow on hover */
+        transform: translateY(-5px) rotate(1deg); /* Slight lift and rotation effect */
     }
-}
 
-
-/* Form Section Styles */
-.form {
-    flex: 1; /* Take equal space */
-    background-color: #fff; /* White background for form */
-    border: 1px solid #ddd; /* Light border for form */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside form */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    height: 650px; /* Fixed height for form */
-}
-
-.form h2 {
-    font-size: 2rem; /* Heading size */
-    margin-bottom: 20px; /* Space below heading */
-    color: rgb(0, 0, 0); /* Accent color for headings */
-    text-align: center;
-}
-
-label {
-    display: block; /* Block display for labels */
-    margin-top: 10px; /* Space above labels */
-    font-weight: bold; /* Bold text for labels */
-    color: #555; /* Softer text color */
-}
-
-input, textarea {
-    width: 100%; /* Full width input */
-    padding: 12px; /* Padding inside input */
-    margin-bottom: 15px; /* Space below inputs */
-    border: 1px solid #ccc; /* Border for inputs */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 1rem; /* Normal font size */
-    transition: border-color 0.3s ease; /* Smooth transition on focus */
-}
-
-input:focus, textarea:focus {
-    border-color: gold; /* Change border color on focus */
-    outline: none; /* Remove default outline */
-}
-
-button.btn {
-    background-color: gold; /* Button background color */
-    color: #141414; /* Button text color */
-    padding: 12px 20px; /* Button padding */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1rem; /* Normal font size */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-button.btn:hover {
-    background-color: #000000; /* Darker button on hover */
-    color: white; /* Change text color on hover */
-}
-
-/* Responsive styling */
-@media (max-width: 768px) {
-    #services-form {
-        flex-direction: column; /* Stack on smaller screens */
+    /* Services List */
+    .services ul {
+        list-style-type: none; /* Remove default list style */
+        padding: 0; /* Remove padding */
     }
-    .services {
-        margin-right: 0; /* Remove margin on smaller screens */
-        margin-bottom: 20px; /* Space below services */
+
+    .services ul li {
+        margin-bottom: 15px; /* Space between list items */
+        font-size: 1.1rem; /* Slightly larger text for clarity */
     }
+
+    /* Highlighted Headers for Categories */
+    .services h3 {
+        font-size: 1.3rem; /* Heading size for categories */
+        margin: 15px 0; /* Space above and below */
+        color: gold; /* Accent color for headings */
+        padding-bottom: 5px; /* Padding below heading */
+    }
+
+    /* Checkmark List Styles */
+    .check-list {
+        list-style-type: none; /* Remove default list style */
+        padding-left: 0; /* Remove padding */
+    }
+
+    .check-list li {
+        position: relative; /* Positioning for the checkmark */
+        padding-left: 25px; /* Space for the checkmark */
+        margin-bottom: 10px; /* Space below each item */
+        font-size: 1.1rem; /* Slightly larger text for clarity */
+        color: #ddd; /* Match text color */
+    }
+
+    .check-list li::before {
+        content: '✔'; /* Checkmark symbol */
+        color: gold; /* Gold color for checkmark */
+        position: absolute; /* Position checkmark */
+        left: 0; /* Align to the left */
+        font-size: 1.2rem; /* Size of the checkmark */
+    }
+
+    /* Media Queries for Responsiveness */
+
+    /* For tablets and smaller devices */
+    @media (max-width: 1024px) {
+        #services-form {
+            flex-direction: column; /* Stack services and form vertically */
+            padding: 40px 15px; /* Adjust padding for smaller screens */
+        }
+
+        .services {
+            margin-right: 0; /* Remove margin between sections on smaller screens */
+            margin-bottom: 20px; /* Add space below services section */
+        }
+
+        .services-grid {
+            grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns for medium screens */
+        }
+    }
+
+    /* For phones and small devices */
+    @media (max-width: 768px) {
+        .services-grid {
+            grid-template-columns: 1fr; /* Switch to single-column layout for small screens */
+        }
+
+        .services h2 {
+            font-size: 2rem; /* Reduce heading size */
+        }
+
+        .service-item {
+            padding: 10px; /* Adjust padding */
+        }
+
+        #services-form {
+            padding: 30px 10px; /* Reduce padding for mobile */
+        }
+    }
+
+
+    /* Form Section Styles */
     .form {
-        margin-top: 20px; /* Space above form when stacked */
-    }
-    .services-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-    }
-    .service-item {
-        margin-bottom: 20px; /* Space below service items */
-    }
-}
-
-@media (max-width: 480px) {
-    .services-grid {
-        grid-template-columns: 1fr; /* 1 column on very small screens */
-    }
-}
-
-/*CEO  SECTION*/
-#ceo-section {
-    padding: 60px 20px; /* Spacing around the section */
-    background-color: #ffffff; /* Background color for the section */
-    color: #000000; /* Text color */
-    text-align: center; /* Center-align text */
-}
-
-.ceo-container {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    gap: 40px; /* Space between image and text */
-    flex-wrap: wrap; /* Wrap on smaller screens */
-}
-
-.ceo-photo {
-    border-radius: 50%; /* Circular image */
-    width: 150px; /* Fixed width */
-    height: 150px; /* Fixed height */
-    object-fit: cover; /* Cover to maintain aspect ratio */
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Shadow for image */
-}
-
-.ceo-description {
-    max-width: 600px; /* Limit width of text */
-    margin-top: 30px;
-}
-
-.social-media {
-    margin-top: 20px; /* Space above social media icons */
-}
-
-.social-media a {
-    color: gold; /* Color for icons */
-    margin: 0 10px; /* Space between icons */
-    font-size: 1.5rem; /* Icon size */
-    transition: color 0.3s; /* Smooth transition */
-}
-
-.social-media a:hover {
-    color: rgb(0, 0, 0); /* Change color on hover */
-}
-
-/* Media Queries for Responsiveness */
-
-/* For tablets and smaller devices */
-@media (max-width: 1024px) {
-    .ceo-container {
-        flex-direction: column; /* Stack the image and text vertically */
-        text-align: center; /* Ensure text remains centered */
+        flex: 1; /* Take equal space */
+        background-color: #fff; /* White background for form */
+        border: 1px solid #ddd; /* Light border for form */
+        border-radius: 8px; /* Rounded corners */
+        padding: 20px; /* Padding inside form */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        height: 650px; /* Fixed height for form */
     }
 
-    .ceo-photo {
-        width: 120px; /* Smaller image size */
-        height: 120px; /* Smaller height */
+    .form h2 {
+        font-size: 2rem; /* Heading size */
+        margin-bottom: 20px; /* Space below heading */
+        color: rgb(0, 0, 0); /* Accent color for headings */
+        text-align: center;
     }
 
-    .ceo-description {
-        margin-top: 20px; /* Less margin on smaller screens */
-        max-width: 90%; /* Limit text width */
+    label {
+        display: block; /* Block display for labels */
+        margin-top: 10px; /* Space above labels */
+        font-weight: bold; /* Bold text for labels */
+        color: #555; /* Softer text color */
     }
 
-    .social-media a {
-        font-size: 1.3rem; /* Smaller icon size */
-    }
-}
-
-/* For phones and small devices */
-@media (max-width: 768px) {
-    .ceo-photo {
-        width: 100px; /* Further reduce image size */
-        height: 100px;
+    input, textarea {
+        width: 100%; /* Full width input */
+        padding: 12px; /* Padding inside input */
+        margin-bottom: 15px; /* Space below inputs */
+        border: 1px solid #ccc; /* Border for inputs */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 1rem; /* Normal font size */
+        transition: border-color 0.3s ease; /* Smooth transition on focus */
     }
 
-    .ceo-description {
-        margin-top: 15px; /* Reduce margin further */
-        font-size: 1rem; /* Slightly reduce font size */
+    input:focus, textarea:focus {
+        border-color: gold; /* Change border color on focus */
+        outline: none; /* Remove default outline */
     }
 
-    .social-media a {
-        font-size: 1.2rem; /* Reduce icon size further */
+    button.btn {
+        background-color: gold; /* Button background color */
+        color: #141414; /* Button text color */
+        padding: 12px 20px; /* Button padding */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 1rem; /* Normal font size */
+        transition: background-color 0.3s ease; /* Smooth transition */
     }
 
+    button.btn:hover {
+        background-color: #000000; /* Darker button on hover */
+        color: white; /* Change text color on hover */
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+        #services-form {
+            flex-direction: column; /* Stack on smaller screens */
+        }
+        .services {
+            margin-right: 0; /* Remove margin on smaller screens */
+            margin-bottom: 20px; /* Space below services */
+        }
+        .form {
+            margin-top: 20px; /* Space above form when stacked */
+        }
+        .services-grid {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+        }
+        .service-item {
+            margin-bottom: 20px; /* Space below service items */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .services-grid {
+            grid-template-columns: 1fr; /* 1 column on very small screens */
+        }
+    }
+
+    /*CEO  SECTION*/
     #ceo-section {
-        padding: 40px 10px; /* Reduce section padding for small devices */
-    }
-}
-
-
-/*booking section */
-/* Booking Section */#booking-section {
-    padding: 40px 20px; /* Spacing around the section */
-    background-color: #141414; /* Background color */
-    color: #ddd; /* Text color */
-    text-align: left; /* Align text to the left */
-    margin-top: 40px; /* Space above the section */
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Space between left and right content */
-    align-items: center; /* Center items vertically */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
-
-.booking-info {
-    flex: 1; /* Allow this section to take space */
-}
-
-.booking-action {
-    text-align: right; /* Align button and text to the right */
-}
-
-/* Heading Styles */
-#booking-section h2 {
-    font-size: 2rem; /* Heading size */
-    color: gold; /* Gold color for the heading */
-    margin-bottom: 10px; /* Space below heading */
-    font-family: "Rubik Mono One", monospace;
-    font-weight: 400;
-    font-style: normal;
-    margin-left: 100px;
-}
-
-/* Paragraph Styles */
-#booking-section p {
-    font-size: 1.1rem; /* Slightly larger text */
-    margin-bottom: 20px; /* Space below text */
-    margin-right: 100px;
-    margin-top: 5px;
-    margin-left: 200px;
-}
-
-/* Button Styles */
-#booking-section .btn1 {
-    background-color: gold; /* Button background color */
-    color: #141414; /* Button text color */
-    padding: 12px 20px; /* Button padding */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 1rem; /* Normal font size */
-    margin-right: 100px;
-}
-
-#booking-section .btn1:hover {
-    background-color: #ffffff; /* Darker button on hover */
-    color: rgb(0, 0, 0); /* Change text color on hover */
-}
-
-/* Icon Styles in Heading */
-#booking-section h2 i {
-    margin-right: 0px; /* Space between the icon and text */
-    color: gold; /* Color of the icon */
-    font-size: 2.5rem; /* Size of the icon */
-}
-
-/* Media Queries for Responsiveness */
-
-/* For tablets and smaller devices */
-@media (max-width: 1024px) {
-    #booking-section {
-        flex-direction: column; /* Stack the content vertically */
+        padding: 60px 20px; /* Spacing around the section */
+        background-color: #ffffff; /* Background color for the section */
+        color: #000000; /* Text color */
         text-align: center; /* Center-align text */
     }
 
-    #booking-section h2 {
-        margin-left: 0; /* Remove left margin */
+    .ceo-container {
+        display: flex; /* Use flexbox for layout */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        gap: 40px; /* Space between image and text */
+        flex-wrap: wrap; /* Wrap on smaller screens */
     }
 
-    #booking-section p {
-        margin-left: 0; /* Remove left margin */
-        margin-right: 0; /* Remove right margin */
+    .ceo-photo {
+        border-radius: 50%; /* Circular image */
+        width: 150px; /* Fixed width */
+        height: 150px; /* Fixed height */
+        object-fit: cover; /* Cover to maintain aspect ratio */
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Shadow for image */
     }
 
-    #booking-section .btn1 {
-        margin-right: 0; /* Remove right margin */
-        margin-top: 20px; /* Add spacing above button */
-    }
-}
-
-/* For phones and small devices */
-@media (max-width: 768px) {
-    #booking-section {
-        padding: 30px 10px; /* Reduce padding */
-    }
-
-    #booking-section h2 {
-        font-size: 1.8rem; /* Reduce heading size */
-        margin-bottom: 10px; /* Adjust margin */
-    }
-
-    #booking-section p {
-        font-size: 1rem; /* Reduce paragraph font size */
-        margin-left: 0; /* Remove margin */
-        margin-right: 0; /* Remove margin */
-    }
-
-    #booking-section .btn1 {
-        padding: 10px 15px; /* Reduce button padding */
-        font-size: 0.9rem; /* Slightly smaller font size */
-    }
-}
-
-
-
-/* Features Section Styling */
-.offer-section {
-    padding: 60px 20px;
-    background-color: #ffffff;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-.offer-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-    color: #F6C90E;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.offer-description {
-    font-size: 1.1rem;
-    color: #000000;
-    margin-bottom: 40px;
-}
-
-.offer-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.offer-item {
-    background-color: #000000;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 30px 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.offer-item i {
-    font-size: 40px;
-    color: #495E57;
-    margin-bottom: 15px;
-}
-
-.offer-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.offer-item p {
-    font-size: 1rem;
-    color: #ffffff;
-    margin: 0;
-}
-
-.offer-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    background-color: #495E57;
-}
-
-.offer-item:hover h3, .offer-item:hover p {
-    color:#F6C90E;
-}
-
-@media (max-width: 992px) {
-    .offer-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .offer-container {
-        grid-template-columns: 1fr; /* 1 column on small screens */
-    }
-}
-
-
-/*contact section*/
-#contact-section {
-    padding: 40px 20px; /* Spacing around the section */
-    background-color: #141414; /* Background color */
-    color: rgb(255, 255, 255); /* Text color */
-    text-align: center; /* Center the text */
-}
-#contact-section h2{
-    color: gold;
-}
-.contactp{
-    color: #000000;
-}
-
-.contact-grid {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
-    gap: 20px; /* Space between grid items */
-    margin-top: 20px; /* Space above grid */
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-/* Contact Item Styles */
-.contact-item {
-    background: rgb(255, 255, 255); /* Semi-transparent background */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Padding inside items */
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle shadow */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.contact-item:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-}
-
-.contact-item i {
-    font-size: 2em; /* Size of the icon */
-    color: gold; /* Icon color */
-    margin-bottom: 10px; /* Space below icon */
-}
-
-.contact-item h3 {
-    margin: 10px 0; /* Space above and below heading */
-    color: rgb(0, 0, 0); /* Gold color for heading */
-}
-
-.social-media1 {
-    margin-top: 30px; /* Space above social media */
-}
-
-.social-icon1 {
-    font-size: 1.5em; /* Size of the social media icons */
-    color: gold; /* Color of the icons */
-    margin: 0 10px; /* Space between icons */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
-}
-
-.social-icon1:hover {
-    color: #fcfcfc; /* Change color on hover */
-    transform: scale(1.2); /* Slightly enlarge icon on hover */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a soft glow effect */
-}
-
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .contact-grid {
-        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr; /* Single column on small screens */
+    .ceo-description {
+        max-width: 600px; /* Limit width of text */
+        margin-top: 30px;
     }
 
     .social-media {
-        text-align: center; /* Center social media icons */
+        margin-top: 20px; /* Space above social media icons */
     }
-}
 
-/*ceo about*/
-#ceo-section1 {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    padding: 40px 20px; /* Spacing around the section */
-    background-color: #ffffff; /* Background color */
-    color: #000000; /* Text color */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
+    .social-media a {
+        color: gold; /* Color for icons */
+        margin: 0 10px; /* Space between icons */
+        font-size: 1.5rem; /* Icon size */
+        transition: color 0.3s; /* Smooth transition */
+    }
 
-.ceo-content1 {
-    display: flex; /* Use flexbox for inner layout */
-    flex-direction: row; /* Horizontal layout */
-    align-items: center; /* Center items vertically */
-    max-width: 1200px; /* Max width for content */
-    margin: 0 auto; /* Center content */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-}
+    .social-media a:hover {
+        color: rgb(0, 0, 0); /* Change color on hover */
+    }
 
-.ceo-image {
-    width: 250px; /* Image width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Circular image */
-    margin-right: 30px; /* Space between image and text */
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
-    object-fit: cover; /* Ensure image fits nicely */
-}
+    /* Media Queries for Responsiveness */
 
-.ceo-details1 {
-    flex: 1; /* Allow details section to take remaining space */
-    margin-top: 20px; /* Add margin for spacing on smaller screens */
-}
+    /* For tablets and smaller devices */
+    @media (max-width: 1024px) {
+        .ceo-container {
+            flex-direction: column; /* Stack the image and text vertically */
+            text-align: center; /* Ensure text remains centered */
+        }
 
-#ceo-about {
-    text-align: left; /* Align text to the left */
-}
+        .ceo-photo {
+            width: 120px; /* Smaller image size */
+            height: 120px; /* Smaller height */
+        }
 
-#ceo-about h2 {
-    font-size: 2.5rem; /* Heading size */
-    color: gold; /* Gold color for the heading */
-    margin-bottom: 20px; /* Space below heading */
-}
+        .ceo-description {
+            margin-top: 20px; /* Less margin on smaller screens */
+            max-width: 90%; /* Limit text width */
+        }
 
-#ceo-about .ceo-list {
-    list-style-type: none; /* Remove default list style */
-    padding: 0; /* Remove padding */
-}
+        .social-media a {
+            font-size: 1.3rem; /* Smaller icon size */
+        }
+    }
 
-#ceo-about .ceo-list li {
-    position: relative; /* Positioning for the checkmark */
-    padding-left: 25px; /* Space for the checkmark */
-    margin: 10px 0; /* Space above and below */
-    font-size: 1.5rem; /* Subheading size */
-    color: #000000; /* Black color for text */
-}
+    /* For phones and small devices */
+    @media (max-width: 768px) {
+        .ceo-photo {
+            width: 100px; /* Further reduce image size */
+            height: 100px;
+        }
 
-#ceo-about .ceo-list li::before {
-    content: '✔'; /* Checkmark symbol */
-    color: gold; /* Gold color for checkmark */
-    position: absolute; /* Position checkmark */
-    left: 0; /* Align to the left */
-    font-size: 1.5rem; /* Size of the checkmark */
-}
+        .ceo-description {
+            margin-top: 15px; /* Reduce margin further */
+            font-size: 1rem; /* Slightly reduce font size */
+        }
 
-/* Responsive styling for smaller screens */
-@media (max-width: 1024px) {
+        .social-media a {
+            font-size: 1.2rem; /* Reduce icon size further */
+        }
+
+        #ceo-section {
+            padding: 40px 10px; /* Reduce section padding for small devices */
+        }
+    }
+
+
+    /*booking section */
+    /* Booking Section */
+    #booking-section {
+        padding: 40px 20px; /* Spacing around the section */
+        background-color: #141414; /* Background color */
+        color: #ddd; /* Text color */
+        text-align: left; /* Align text to the left */
+        margin-top: 40px; /* Space above the section */
+        display: flex; /* Use flexbox */
+        justify-content: space-between; /* Space between left and right content */
+        align-items: center; /* Center items vertically */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    }
+
+    .booking-info {
+        flex: 1; /* Allow this section to take space */
+    }
+
+    .booking-action {
+        text-align: right; /* Align button and text to the right */
+    }
+
+    /* Heading Styles */
+    #booking-section h2 {
+        font-size: 2rem; /* Heading size */
+        color: gold; /* Gold color for the heading */
+        margin-bottom: 10px; /* Space below heading */
+        font-family: "Rubik Mono One", monospace;
+        font-weight: 400;
+        font-style: normal;
+        margin-left: 100px;
+        display: flex; /* Align image and text */
+        align-items: center; /* Center image and text vertically */
+    }
+
+    /* Image Styles for the Heading */
+    #booking-section h2 img {
+        margin-right: 10px; /* Space between the image and text */
+        width: 300px; /* Adjust the image width */
+        height: 100px; /* Adjust the image height */
+    }
+
+    /* Paragraph Styles */
+    #booking-section p {
+        font-size: 1.1rem; /* Slightly larger text */
+        margin-bottom: 20px; /* Space below text */
+        margin-right: 100px;
+        margin-top: 5px;
+        margin-left: 200px;
+    }
+
+    /* Button Styles */
+    #booking-section .btn1 {
+        background-color: gold; /* Button background color */
+        color: #141414; /* Button text color */
+        padding: 12px 20px; /* Button padding */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 1rem; /* Normal font size */
+        margin-right: 100px;
+    }
+
+    #booking-section .btn1:hover {
+        background-color: #ffffff; /* Darker button on hover */
+        color: rgb(0, 0, 0); /* Change text color on hover */
+    }
+
+    /* Media Queries for Responsiveness */
+
+    /* For tablets and smaller devices */
+    @media (max-width: 1024px) {
+        #booking-section {
+            flex-direction: column; /* Stack the content vertically */
+            text-align: center; /* Center-align text */
+        }
+
+        #booking-section h2 {
+            margin-left: 0; /* Remove left margin */
+        }
+
+        #booking-section p {
+            margin-left: 0; /* Remove left margin */
+            margin-right: 0; /* Remove right margin */
+        }
+
+        #booking-section .btn1 {
+            margin-right: 0; /* Remove right margin */
+            margin-top: 20px; /* Add spacing above button */
+        }
+    }
+
+    /* For phones and small devices */
+    @media (max-width: 768px) {
+        #booking-section {
+            padding: 30px 10px; /* Reduce padding */
+        }
+
+        #booking-section h2 {
+            font-size: 1.8rem; /* Reduce heading size */
+            margin-bottom: 10px; /* Adjust margin */
+        }
+
+        #booking-section p {
+            font-size: 1rem; /* Reduce paragraph font size */
+            margin-left: 0; /* Remove margin */
+            margin-right: 0; /* Remove margin */
+        }
+
+        #booking-section .btn1 {
+            padding: 10px 15px; /* Reduce button padding */
+            font-size: 0.9rem; /* Slightly smaller font size */
+        }
+    }
+
+    /* Features Section Styling */
+    .offer-section {
+        padding: 60px 20px;
+        background-color: #ffffff;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .offer-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: #F6C90E;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .offer-description {
+        font-size: 1.1rem;
+        color: #000000;
+        margin-bottom: 40px;
+    }
+
+    .offer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .offer-item {
+        background-color: #000000;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .offer-item i {
+        font-size: 40px;
+        color: #495E57;
+        margin-bottom: 15px;
+    }
+
+    .offer-item h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #ffffff;
+    }
+
+    .offer-item p {
+        font-size: 1rem;
+        color: #ffffff;
+        margin: 0;
+    }
+
+    .offer-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        background-color: #f5f5f53c;
+    }
+
+    .offer-item:hover h3, .offer-item:hover p {
+        color:#000000;
+    }
+
+    @media (max-width: 992px) {
+        .offer-container {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .offer-container {
+            grid-template-columns: 1fr; /* 1 column on small screens */
+        }
+    }
+
+
+    /*contact section*/
+    #contact-section {
+        padding: 40px 20px; /* Spacing around the section */
+        background-color: #141414; /* Background color */
+        color: rgb(255, 255, 255); /* Text color */
+        text-align: center; /* Center the text */
+    }
+    #contact-section h2{
+        color: gold;
+    }
+    .contactp{
+        color: #000000;
+    }
+
+    .contact-grid {
+        display: grid; /* Use grid layout */
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        gap: 20px; /* Space between grid items */
+        margin-top: 20px; /* Space above grid */
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* Contact Item Styles */
+    .contact-item {
+        background: rgb(255, 255, 255); /* Semi-transparent background */
+        border-radius: 8px; /* Rounded corners */
+        padding: 20px; /* Padding inside items */
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .contact-item:hover {
+        transform: translateY(-5px); /* Slight lift on hover */
+    }
+
+    .contact-item i {
+        font-size: 2em; /* Size of the icon */
+        color: gold; /* Icon color */
+        margin-bottom: 10px; /* Space below icon */
+    }
+
+    .contact-item h3 {
+        margin: 10px 0; /* Space above and below heading */
+        color: rgb(0, 0, 0); /* Gold color for heading */
+    }
+
+    .social-media1 {
+        margin-top: 30px; /* Space above social media */
+    }
+
+    .social-icon1 {
+        font-size: 1.5em; /* Size of the social media icons */
+        color: gold; /* Color of the icons */
+        margin: 0 10px; /* Space between icons */
+        transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+    }
+
+    .social-icon1:hover {
+        color: #fcfcfc; /* Change color on hover */
+        transform: scale(1.2); /* Slightly enlarge icon on hover */
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Add a soft glow effect */
+    }
+
+
+    /* Responsive Styles */
+    @media (max-width: 1024px) {
+        .contact-grid {
+            grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .contact-grid {
+            grid-template-columns: 1fr; /* Single column on small screens */
+        }
+
+        .social-media {
+            text-align: center; /* Center social media icons */
+        }
+    }
+
+    /*ceo about*/
     #ceo-section1 {
-        flex-direction: column; /* Stack items vertically */
-        text-align: center; /* Center text */
-        padding: 30px 10px; /* Adjust padding */
+        display: flex; /* Use flexbox for layout */
+        align-items: center; /* Center items vertically */
+        padding: 40px 20px; /* Spacing around the section */
+        background-color: #ffffff; /* Background color */
+        color: #000000; /* Text color */
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
     }
 
     .ceo-content1 {
-        flex-direction: column; /* Stack image and text */
-        align-items: center; /* Center items */
-        text-align: center; /* Center-align text */
+        display: flex; /* Use flexbox for inner layout */
+        flex-direction: row; /* Horizontal layout */
+        align-items: center; /* Center items vertically */
+        max-width: 1200px; /* Max width for content */
+        margin: 0 auto; /* Center content */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
     }
 
     .ceo-image {
-        margin-bottom: 20px; /* Space between image and text */
-    }
-    
-    #ceo-about h2 {
-        font-size: 2rem; /* Adjust heading size */
-    }
-
-    #ceo-about .ceo-list li {
-        font-size: 1.2rem; /* Adjust list item size */
-    }
-}
-
-/* For mobile devices */
-@media (max-width: 768px) {
-    #ceo-section1 {
-        padding: 20px 10px; /* Reduce padding */
+        width: 250px; /* Image width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 50%; /* Circular image */
+        margin-right: 30px; /* Space between image and text */
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+        object-fit: cover; /* Ensure image fits nicely */
     }
 
-    .ceo-content1 {
-        width: 100%; /* Ensure full width on mobile */
+    .ceo-details1 {
+        flex: 1; /* Allow details section to take remaining space */
+        margin-top: 20px; /* Add margin for spacing on smaller screens */
     }
 
-    .ceo-image {
-        width: 150px; /* Reduce image size on mobile */
-        margin-bottom: 20px; /* Add margin below image */
+    #ceo-about {
+        text-align: left; /* Align text to the left */
     }
 
     #ceo-about h2 {
-        font-size: 1.8rem; /* Reduce heading size */
+        font-size: 2.5rem; /* Heading size */
+        color: gold; /* Gold color for the heading */
+        margin-bottom: 20px; /* Space below heading */
+    }
+
+    #ceo-about .ceo-list {
+        list-style-type: none; /* Remove default list style */
+        padding: 0; /* Remove padding */
     }
 
     #ceo-about .ceo-list li {
-        font-size: 1.1rem; /* Reduce font size */
+        position: relative; /* Positioning for the checkmark */
+        padding-left: 25px; /* Space for the checkmark */
+        margin: 10px 0; /* Space above and below */
+        font-size: 1.5rem; /* Subheading size */
+        color: #000000; /* Black color for text */
     }
-}
+
+    #ceo-about .ceo-list li::before {
+        content: '✔'; /* Checkmark symbol */
+        color: gold; /* Gold color for checkmark */
+        position: absolute; /* Position checkmark */
+        left: 0; /* Align to the left */
+        font-size: 1.5rem; /* Size of the checkmark */
+    }
+
+    /* Responsive styling for smaller screens */
+    @media (max-width: 1024px) {
+        #ceo-section1 {
+            flex-direction: column; /* Stack items vertically */
+            text-align: center; /* Center text */
+            padding: 30px 10px; /* Adjust padding */
+        }
+
+        .ceo-content1 {
+            flex-direction: column; /* Stack image and text */
+            align-items: center; /* Center items */
+            text-align: center; /* Center-align text */
+        }
+
+        .ceo-image {
+            margin-bottom: 20px; /* Space between image and text */
+        }
+        
+        #ceo-about h2 {
+            font-size: 2rem; /* Adjust heading size */
+        }
+
+        #ceo-about .ceo-list li {
+            font-size: 1.2rem; /* Adjust list item size */
+        }
+    }
+
+    /* For mobile devices */
+    @media (max-width: 768px) {
+        #ceo-section1 {
+            padding: 20px 10px; /* Reduce padding */
+        }
+
+        .ceo-content1 {
+            width: 100%; /* Ensure full width on mobile */
+        }
+
+        .ceo-image {
+            width: 150px; /* Reduce image size on mobile */
+            margin-bottom: 20px; /* Add margin below image */
+        }
+
+        #ceo-about h2 {
+            font-size: 1.8rem; /* Reduce heading size */
+        }
+
+        #ceo-about .ceo-list li {
+            font-size: 1.1rem; /* Reduce font size */
+        }
+    }
 
 
-/*ticket section*/
-#tickets-section {
-    padding: 40px 20px; /* Spacing around the section */
-    background-color: #141414; /* Background color */
-    color: #ddd; /* Text color */
-    text-align: center; /* Center the text */
-}
+    /*ticket section*/
+    #tickets-section {
+        padding: 40px 20px; /* Spacing around the section */
+        background-color: #141414; /* Background color */
+        color: #ddd; /* Text color */
+        text-align: center; /* Center the text */
+    }
 
-.tickets-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-around; /* Space out options */
-    margin-top: 20px; /* Space above options */
-}
-
-.ticket-option {
-    background-color: white; /* Slightly transparent background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside the option */
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-    width: 45%; /* Width of each option */
-}
-
-.ticket-option:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-}
-
-.ticket-image {
-    width: 100%; /* Full width for images */
-    border-radius: 10px; /* Rounded corners for images */
-    height: 200px; /* Set a specific height */
-    object-fit: cover; /* Ensure the image covers the area */
-}
-
-.ticket-option h3 {
-    margin: 15px 0; /* Space above and below heading */
-    color: gold; /* Gold color for headings */
-}
-
-.ticket-option p {
-    margin-bottom: 20px; /* Space below paragraph */
-    color: #000000; /* Paragraph color */
-}
-
-.btn {
-    background-color: gold; /* Button background color */
-    color: #141414; /* Button text color */
-    padding: 10px 20px; /* Button padding */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.btn:hover {
-    background-color: #000000; /* Darker button on hover */
-    color: white; /* Change text color on hover */
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
     .tickets-container {
-        flex-direction: column; /* Stack options on smaller screens */
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-around; /* Space out options */
+        margin-top: 20px; /* Space above options */
     }
+
     .ticket-option {
-        width: 90%; /* Make options take up more width on smaller screens */
-        margin: 10px auto; /* Center options */
+        background-color: white; /* Slightly transparent background */
+        border-radius: 10px; /* Rounded corners */
+        padding: 20px; /* Padding inside the option */
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        width: 45%; /* Width of each option */
     }
-}
 
-/*networking section*/
-#networking-section {
-    padding: 40px 20px; /* Spacing around the section */
-    background-color: #ffffff; /* Background color */
-    color: #000000; /* Text color */
-    text-align: center; /* Center the title and subtitle */
-}
+    .ticket-option:hover {
+        transform: translateY(-5px); /* Slight lift on hover */
+    }
 
-.networking-title {
-    font-size: 2.5rem; /* Title size */
-    color: gold; /* Color for the title */
-    margin-bottom: 10px; /* Space below the title */
-}
+    .ticket-image {
+        width: 100%; /* Full width for images */
+        border-radius: 10px; /* Rounded corners for images */
+        height: 200px; /* Set a specific height */
+        object-fit: cover; /* Ensure the image covers the area */
+    }
 
-.networking-subtitle {
-    font-size: 1.2rem; /* Subtitle size */
-    margin-bottom: 30px; /* Space below the subtitle */
-}
+    .ticket-option h3 {
+        margin: 15px 0; /* Space above and below heading */
+        color: gold; /* Gold color for headings */
+    }
 
-.grid-container {
-    display: grid; /* Use CSS grid layout */
-    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
-    gap: 20px; /* Space between grid items */
-}
+    .ticket-option p {
+        margin-bottom: 20px; /* Space below paragraph */
+        color: #000000; /* Paragraph color */
+    }
 
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside each grid item */
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
-}
+    .btn {
+        background-color: gold; /* Button background color */
+        color: #141414; /* Button text color */
+        padding: 10px 20px; /* Button padding */
+        border: none; /* Remove border */
+        border-radius: 5px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    }
 
-.grid-item:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-}
+    .btn:hover {
+        background-color: #000000; /* Darker button on hover */
+        color: white; /* Change text color on hover */
+    }
 
-.grid-item h3 {
-    margin-bottom: 15px; /* Space below headings */
-    color: gold; /* Gold color for headings */
-}
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        .tickets-container {
+            flex-direction: column; /* Stack options on smaller screens */
+        }
+        .ticket-option {
+            width: 90%; /* Make options take up more width on smaller screens */
+            margin: 10px auto; /* Center options */
+        }
+    }
 
-.grid-item p {
-    color: #000000; /* Paragraph color */
-}
+    /*networking section*/
+    #networking-section {
+        padding: 40px 20px; /* Spacing around the section */
+        background-color: #ffffff; /* Background color */
+        color: #000000; /* Text color */
+        text-align: center; /* Center the title and subtitle */
+    }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
+    .networking-title {
+        font-size: 2.5rem; /* Title size */
+        color: gold; /* Color for the title */
+        margin-bottom: 10px; /* Space below the title */
+    }
+
+    .networking-subtitle {
+        font-size: 1.2rem; /* Subtitle size */
+        margin-bottom: 30px; /* Space below the subtitle */
+    }
+
     .grid-container {
-        grid-template-columns: 1fr; /* Stack items on smaller screens */
+        display: grid; /* Use CSS grid layout */
+        grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+        gap: 20px; /* Space between grid items */
     }
-}
 
-/*review section*/
-#reviews-section {
-    padding: 40px 20px; /* Spacing around the section */
-    background-color: #141414; /* Background color */
-    color: #ddd; /* Text color */
-    text-align: center; /* Center the title */
-}
+    .grid-item {
+        background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+        border-radius: 10px; /* Rounded corners */
+        padding: 20px; /* Padding inside each grid item */
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    }
 
-.reviews-title {
-    font-size: 2.5rem; /* Title size */
-    color: gold; /* Color for the title */
-    margin-bottom: 30px; /* Space below the title */
-}
+    .grid-item:hover {
+        transform: translateY(-5px); /* Slight lift on hover */
+    }
 
-.video-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center the videos */
-    gap: 20px; /* Space between videos */
-}
+    .grid-item h3 {
+        margin-bottom: 15px; /* Space below headings */
+        color: gold; /* Gold color for headings */
+    }
 
-.video-item {
-    flex: 1; /* Allow videos to grow equally */
-    max-width: 500px; /* Set a max width for videos */
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensure video fits within rounded corners */
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
-}
+    .grid-item p {
+        color: #000000; /* Paragraph color */
+    }
 
-.video-item video {
-    width: 100%; /* Adjust width to fit the container */
-    height: auto; /* Maintain aspect ratio */
-}
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr; /* Stack items on smaller screens */
+        }
+    }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
+    /*review section*/
+    #reviews-section {
+        padding: 40px 20px; /* Spacing around the section */
+        background-color: #141414; /* Background color */
+        color: #ddd; /* Text color */
+        text-align: center; /* Center the title */
+    }
+
+    .reviews-title {
+        font-size: 2.5rem; /* Title size */
+        color: gold; /* Color for the title */
+        margin-bottom: 30px; /* Space below the title */
+    }
+
     .video-container {
-        flex-direction: column; /* Stack videos on smaller screens */
-        align-items: center; /* Center videos */
+        display: flex; /* Use flexbox for alignment */
+        justify-content: center; /* Center the videos */
+        gap: 20px; /* Space between videos */
     }
-    
+
     .video-item {
-        max-width: 100%; /* Allow full width on smaller screens */
+        flex: 1; /* Allow videos to grow equally */
+        max-width: 500px; /* Set a max width for videos */
+        background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+        border-radius: 10px; /* Rounded corners */
+        overflow: hidden; /* Ensure video fits within rounded corners */
+        box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Shadow for depth */
     }
-}
-/*faq sections */
-#faq-section {
-    padding: 40px 20px; /* Spacing around the section */
-    background-color: #141414; /* Background color */
-    color: #ddd; /* Text color */
-    text-align: center; /* Center the title */
-}
 
-.directions-container {
-    padding: 10px;
- 
-    border-radius: 5px;  /* Rounded corners */
-    margin: 10px 0;
-}
+    .video-item video {
+        width: 100%; /* Adjust width to fit the container */
+        height: auto; /* Maintain aspect ratio */
+    }
 
-.directions-link {
-    text-decoration: none;  /* Remove underline */
-    color: #007bff;  /* Make the link blue (can be adjusted) */
-    font-weight: bold;  /* Bold text for the link */
-    font-size: 16px;  /* Font size */
-}
-
-.directions-link:hover {
-    color: #ffcc00;  /* Change color on hover */
-    text-decoration: underline;  /* Add underline on hover (optional) */
-}
-
-.email-container1 {
-    /* You can style the div as desired */
-    margin: 10px 0;
-}
-
-.email-link {
-    text-decoration: none;  /* Remove underline */
-    color: #ffcc00;  /* Change color (you can adjust this) */
-    font-weight: bold;  /* Make the text bold */
-    font-size: 16px;  /* Set font size */
-}
-
-.email-link:hover {
-    color: #ffcc00;  /* Change color on hover (optional) */
-    text-decoration: underline;  /* Underline on hover (optional) */
-}
-
-
-.faq-title {
-    font-size: 2.5rem; /* Title size */
-    color: gold; /* Color for the title */
-    margin-bottom: 30px; /* Space below the title */
-}
-
-.faq-item {
-    margin-bottom: 20px; /* Space between FAQ items */
-    text-align: left; /* Align text to the left for better readability */
-    max-width: 800px; /* Max width for FAQ items */
-    margin-left: auto; /* Center align the item */
-    margin-right: auto; /* Center align the item */
-}
-
-.faq-item h3 {
-    font-size: 1.5rem; /* Font size for questions */
-    color: gold; /* Color for question text */
-    margin-bottom: 10px; /* Space below question */
-}
-
-.faq-item p {
-    font-size: 1.1rem; /* Font size for answers */
-    color: #ddd; /* Color for answer text */
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        .video-container {
+            flex-direction: column; /* Stack videos on smaller screens */
+            align-items: center; /* Center videos */
+        }
+        
+        .video-item {
+            max-width: 100%; /* Allow full width on smaller screens */
+        }
+    }
+    /*faq sections */
     #faq-section {
-        padding: 20px 10px; /* Reduce padding on smaller screens */
+        padding: 40px 20px; /* Spacing around the section */
+        background-color: #141414; /* Background color */
+        color: #ddd; /* Text color */
+        text-align: center; /* Center the title */
     }
+
+    .directions-container {
+        padding: 10px;
     
+        border-radius: 5px;  /* Rounded corners */
+        margin: 10px 0;
+    }
+
+    .directions-link {
+        text-decoration: none;  /* Remove underline */
+        color: #007bff;  /* Make the link blue (can be adjusted) */
+        font-weight: bold;  /* Bold text for the link */
+        font-size: 16px;  /* Font size */
+    }
+
+    .directions-link:hover {
+        color: #ffcc00;  /* Change color on hover */
+        text-decoration: underline;  /* Add underline on hover (optional) */
+    }
+
+    .email-container1 {
+        /* You can style the div as desired */
+        margin: 10px 0;
+    }
+
+    .email-link {
+        text-decoration: none;  /* Remove underline */
+        color: #ffcc00;  /* Change color (you can adjust this) */
+        font-weight: bold;  /* Make the text bold */
+        font-size: 16px;  /* Set font size */
+    }
+
+    .email-link:hover {
+        color: #ffcc00;  /* Change color on hover (optional) */
+        text-decoration: underline;  /* Underline on hover (optional) */
+    }
+
+
     .faq-title {
-        font-size: 2rem; /* Smaller title size on mobile */
+        font-size: 2.5rem; /* Title size */
+        color: gold; /* Color for the title */
+        margin-bottom: 30px; /* Space below the title */
+    }
+
+    .faq-item {
+        margin-bottom: 20px; /* Space between FAQ items */
+        text-align: left; /* Align text to the left for better readability */
+        max-width: 800px; /* Max width for FAQ items */
+        margin-left: auto; /* Center align the item */
+        margin-right: auto; /* Center align the item */
     }
 
     .faq-item h3 {
-        font-size: 1.2rem; /* Smaller question size on mobile */
+        font-size: 1.5rem; /* Font size for questions */
+        color: gold; /* Color for question text */
+        margin-bottom: 10px; /* Space below question */
     }
 
     .faq-item p {
-        font-size: 1rem; /* Smaller answer size on mobile */
+        font-size: 1.1rem; /* Font size for answers */
+        color: #ddd; /* Color for answer text */
     }
-}
+
+    /* Responsive Styling */
+    @media (max-width: 768px) {
+        #faq-section {
+            padding: 20px 10px; /* Reduce padding on smaller screens */
+        }
+        
+        .faq-title {
+            font-size: 2rem; /* Smaller title size on mobile */
+        }
+
+        .faq-item h3 {
+            font-size: 1.2rem; /* Smaller question size on mobile */
+        }
+
+        .faq-item p {
+            font-size: 1rem; /* Smaller answer size on mobile */
+        }
+    }
 
 
 
-footer {
-    background-color: #ffffff;
-    padding: 30px 0;
-    color: rgb(0, 0, 0);
-    text-align: center;
-}
+    footer {
+        background-color: #ffffff;
+        padding: 30px 0;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
 
-.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
