@@ -231,8 +231,8 @@ nav {
 }
 .overlay-logo {
     position: absolute; /* Position the logo absolutely */
-    top: 20px; /* Adjust vertical position */
-    left: 110px; /* Adjust horizontal position */
+    top: 10px; /* Adjust vertical position */
+    left: 130px; /* Adjust horizontal position */
     height: 400px; /* Set a height for the logo */
     width: auto; /* Maintain aspect ratio */
     z-index: 2; /* Ensure it overlays on top */
